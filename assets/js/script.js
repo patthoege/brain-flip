@@ -63,7 +63,7 @@ class MixOrMatch {
 
     canFlipCard(card) {
         return true;
-        
+        //return !this.busy && !this.matchedCards.includes(card) !== this.cardCheck;
     }
 }
 
@@ -88,7 +88,7 @@ function ready() {
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
-            overlay.classList.remove('overlay-text');
+            overlay.parentNode.removeChild(overlay);
             game.startGame();
         });
     });
