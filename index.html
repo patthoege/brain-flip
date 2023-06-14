@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel='icon' type='image/x-icon' href='assets/images/favicon.ico'/>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Brain Flip</title>
+</head>
+<body>
+
+<!-- Start: Heading area -->
+<h1 class="website-title">Brain Flip </h1>
+<h2 class="game-title">Memory Card Game</h2>
+<!-- End: Heading area -->
+
+<!-- Start: Memory Card Game Area -->
+<div class="game-container">
+    <div class="game-info-container">
+        <div class="game-info">
+            Time <span id="time-countdown">100</span>
+        </div>
+        <div class="game-info">
+            Moves <span id="flips">0</span>
+        </div>
+    </div>
+
+    <div class="card" data-framework="img-one">
+        <img class="front-face" src="assets/images/detail-shot-modern-architecture-facade.jpg" alt="detail shot modern architecture facade">
+        <img class="back-face" src="assets/images/card-pattern.png" alt="Front Memory Card">
+    </div> 
+
+    <div class="card" data-framework="img-one">
+        <img class="front-face" src="assets/images/detail-shot-modern-architecture-facade.jpg" alt="detail shot modern architecture facade">
+        <img class="back-face" src="assets/images/card-pattern.png" alt="Front Memory Card">
+    </div> 
+
+    <div class="card" data-framework="img-two">
+        <img class="front-face" src="assets/images/low-vertical-angle-view-skyscrapers.jpg" alt="low vertical angle view skyscrapers">
+        <img class="back-face" src="assets/images/card-pattern.png" alt="Front Memory Card">
+    </div> 
+
+    <div class="card" data-framework="img-two">
+       <img class="front-face" src="assets/images/low-vertical-angle-view-skyscrapers.jpg" alt="low vertical angle view skyscrapers ">
+       <img class="back-face" src="assets/images/card-pattern.png" alt="Front Memory Card">  
+    </div> 
+
+    <div class="card" data-framework="img-three">
+       <img class="front-face" src="assets/images/low-angle-view-glass-roof-modern-building.jpg" alt="low angle view glass roof modern building">
+       <img class="back-face" src="assets/images/card-pattern.png" alt="Front Memory Card">
+    </div>
+
+    <div class="card"  data-framework="img-three">
+       <img class="front-face" src="assets/images/low-angle-view-glass-roof-modern-building.jpg" alt="low angle view glass roof modern building">
+       <img class="back-face" src="assets/images/card-pattern.png" alt="Front Memory Card">
+    </div> 
+
+    <div class="card"  data-framework="img-four">
+       <img class="front-face" src="assets/images/low-angle-view-modern-office-buildings.jpg" alt="low angle view modern office buildings">
+       <img class="back-face" src="assets/images/card-pattern.png" alt="Front Memory Card"> 
+    </div> 
+
+    <div class="card" data-framework="img-four">
+       <img class="front-face" src="assets/images/low-angle-view-modern-office-buildings.jpg" alt="low angle view modern office buildings">
+       <img class="back-face" src="assets/images/card-pattern.png" alt="Front Memory Card">
+    </div> 
+
+    <div class="card" data-framework="img-five">
+       <img class="front-face" src="assets/images/low-view-modern-skyscrapers-office-buildings.jpg" alt="low view modern skyscrapers office buildings">
+       <img class="back-face" src="assets/images/card-pattern.png" alt="Front Memory Card">
+    </div> 
+
+    <div class="card" data-framework="img-five">
+       <img class="front-face" src="assets/images/low-view-modern-skyscrapers-office-buildings.jpg" alt="low view modern skyscrapers office buildings">
+       <img class="back-face" src="assets/images/card-pattern.png" alt="Front Memory Card">
+    </div> 
+
+    <div class="card"data-framework="img-six">
+       <img class="front-face" src="assets/images/skyscrapers-from-low-angle-perspective.jpg" alt="skyscrapers from low angle perspective">
+       <img class="back-face" src="assets/images/card-pattern.png" alt="Front Memory Card">
+    </div> 
+
+    <div class="card" data-framework="img-six">
+       <img class="front-face" src="assets/images/skyscrapers-from-low-angle-perspective.jpg" alt="skyscrapers from low angle perspective">
+       <img class="back-face" src="assets/images/card-pattern.png" alt="Front Memory Card">
+    </div> 
+
+    <div class="card" data-framework="img-seven">
+       <img class="front-face" src="assets/images/low-angle-view-skyscrapers.jpg" alt="low angle view skyscrapers">
+       <img class="back-face" src="assets/images/card-pattern.png" alt="Front Memory Card">  
+    </div> 
+
+    <div class="card" data-framework="img-seven">
+       <img class="front-face" src="assets/images/low-angle-view-skyscrapers.jpg" alt="low angle view skyscrapers ">
+       <img class="back-face" src="assets/images/card-pattern.png" alt="Front Memory Card">
+    </div> 
+
+    <div class="card" data-framework="img-eight">
+       <img class="front-face" src="assets/images/skyscrapers-from-low-angle-view.jpg" alt="skyscrapers from low angle view">
+       <img class="back-face" src="assets/images/card-pattern.png" alt="Front Memory Card">
+    </div> 
+
+    <div class="card" data-framework="img-eight">
+       <img class="front-face" src="assets/images/skyscrapers-from-low-angle-view.jpg" alt="skyscrapers from low angle view">
+       <img class="back-face" src="assets/images/card-pattern.png" alt="Front Memory Card">
+    </div> 
+    
+    <div class="reset">
+        <button id="restart-board"><i class="fas fa-sync-alt" aria-label="Click this button to play a new game."></i> PLAY AGAIN!</button>
+    </div>
+</div>
+<!-- End: Memory Card Game Area -->
+
+<!-- Start: Footer -->
+<footer class="footer">
+    <div>
+        <p class="social-networks">Created by 
+            <a href="mailto:paty.hoge98@gmail.com" class="social" target="_blank" rel="noopener" aria-label="Get in contact through my email address,">Patricia Höge </a> 
+            <a href="https://github.com/patthoege" target="_blank" aria-label="Visit my Github profile "><i class="fa-brands fa-github"></i></a> 
+            <a href="https://www.linkedin.com/in/patricia-h%C3%B6ge-417b72228/" target="_blank" rel="noopener" aria-label="Visit my linkedin page"><i class="fa-brands fa-linkedin"></i></a> 
+        </p>
+    </div>
+    <p class="copyright">
+        BrainFlip <span>&copy;</span>2023
+    </p>
+</footer>
+<!-- End: Footer -->
+
+<!-- Font Awesome Icon Script-->
+<script src="https://kit.fontawesome.com/629a0a9fe6.js" crossorigin="anonymous"></script>
+<!-- JavaScript file script -->
+<script src="assets/js/script.js"></script>   
+</body>
+</html>
