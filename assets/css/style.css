@@ -23,7 +23,6 @@ body {
 }
 /*  -------------------- Overlay text area */
 .overlay-text {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -34,6 +33,9 @@ body {
     justify-content: center;
     align-items: center;
     color: #1a01fb;
+}
+.hidden-overlay-text {
+    display: none !important;
 }
 
 .overlay-text-small {
