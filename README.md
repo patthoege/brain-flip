@@ -4,7 +4,7 @@
 
 ![Brain Flip's responsive design](assets/)
 
-You can view the live site here - <a href="https://patthoege.github.io/" target="_blank" rel="noopener">Brain Flip</a>
+You can view the live site here - <a href="https://patthoege.github.io/brain-flip/" target="_blank" rel="noopener">Brain Flip</a>
 
 ## Table of Contents
 
