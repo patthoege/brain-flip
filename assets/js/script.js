@@ -44,30 +44,45 @@ class MixOrMatch {
         this.moves = document.getElementById('flips');
         this.audioController = new AudioController();
     }
-
+  
     startGame() {
         this.cardCheck = null;
         this.totalClicks = 0;
         this.timeRemaining = this.totalTime;
         this.matchedCards =[];
         this.busy = true;
+
+        this.shuffleCards();
     }
 
+    /**
+     * This function flips the cards and counts the moves, 
+     * when the cards are being clicked. It plays the flip sound.
+     */
     flipCard(card) {
         if(this.canFlipCard(card)) {
             this.audioController.flip();
             this.totalClicks++;
             this.moves.innerText = this.totalClicks;
             card.classList.add('flip');
-            
-            
         }
-
     }
 
     canFlipCard(card) {
         return true;
         //return !this.busy && !this.matchedCards.includes(card) !== this.cardCheck;
+    }
+
+    /**
+     * This function shuffles the order from the array. 
+     * Shuffle adapted from Fisher-Yates algorithm.
+     */
+    shuffleCards() {
+        for(let i = this.cardsArray.length - 1; i > 0; i--) {
+            let randIndex = Math.floor(Math.random() * (i+1));
+            this.cardsArray[randIndex].style.order = i;
+            this.cardsArray[i].style.order = randIndex;
+        }
     }
 }
 
