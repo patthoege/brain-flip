@@ -232,6 +232,7 @@ Steps I took to deploy my website;
 * The font came from [Google Fonts](https://fonts.google.com/)
 * The color palette was displayed by [Coolors](https://coolors.co/)
 * The icons came from [Font Awesome](https://fontawesome.com/)
+* The favicon came from [Icons8](https://icons8.de/icons/set/brain)
 * Converter image to webp format for better performance from [Convertio](https://convertio.co/) 
 * The responsive preview image at the top of the README.md came from [AmIResponsive?](https://ui.dev/amiresponsive?)
 * The card pattern image came from [Pattern Monster](https://pattern.monster/)

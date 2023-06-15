@@ -44,6 +44,7 @@ class MixOrMatch {
         this.moves = document.getElementById('flips');
         this.audioController = new AudioController();
     }
+
     startGame() {
         this.cardCheck = null;
         this.totalClicks = 0;
@@ -57,6 +58,9 @@ class MixOrMatch {
             this.audioController.flip();
             this.totalClicks++;
             this.moves.innerText = this.totalClicks;
+            card.classList.add('flip');
+            
+            
         }
 
     }

@@ -113,10 +113,10 @@ body {
     backface-visibility: hidden;
 }
 
-.card {
+.card.flip {
     transform: rotateY(180deg);
 }
-.back-face {
+.front-face {
     transform: rotateY(180deg);
 }
 
