@@ -244,7 +244,8 @@ Steps I took to deploy my website;
 * The website layout draws its inspiration from the Love Maths project. 
 * <a href="https://www.w3schools.com/">W3 Schools</a> was a source of help to learn the functions of a card game.
 * The <a href="https://www.youtube.com/watch?v=fYq5PXgSsbE&t=68s">Web Dev Simplified</a> was a very useful resource to learn CSS flex-box.
-* I research on various memory card games to gain insights. During this process, I drew inspiration from the <a href=""> Pawshake</a> website and incorporated some of its key service points into my own.
+* I research on various memory card games to gain insights. During this process, I drew inspiration from the <a href="">  </a> website and incorporated some of its key service points into my own.
+* <a href="https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj"> dev.to - How to shuffle arrays</a>
  
 
 

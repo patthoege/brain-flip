@@ -52,8 +52,56 @@ class MixOrMatch {
         this.matchedCards =[];
         this.busy = true;
 
-        this.shuffleCards();
+        /**
+         * When the game is over, this function starts a new game.
+         */
+        setTimeout(() => {
+            this.audioController.startMusic();
+            this.shuffleCards();
+            this.countDown = this.startCountDown();
+            this.busy = false
+        }, 400);
+
+        /**
+         * Sets the timer and moves
+         */
+        this.hideCards();
+        this.timer.innerText = this.timeRemaining;
+        this.moves.innerText = this.totalClicks;
     }
+    
+    hideCards() {
+        this.cardsArray.forEach(card => {
+            card.classList.remove('visible');
+            card.classList.remove('matched');
+        });
+    }
+
+    /**
+     * Sets the count down remaining 
+     */
+    startCountDown() {
+        return setInterval(() => {
+            this.timeRemaining--;
+            this.timer.innerText = this.timeRemaining;
+            if (this.timeRemaining === 0)
+               this.gameOver()
+        },900);
+
+    }
+
+    /**
+     * Sets the game overlay text and the game over sound
+     */
+    gameOver() {
+        clearInterval(this.countDown);
+        this.audioController.gameOver();
+        console.log('Game Over');
+        const gameOverText = document.getElementById('game-over-text');
+        gameOverText.classList.remove('hidden-overlay-text');
+        gameOverText.classList.add('visible');
+    }
+
 
     /**
      * This function flips the cards and counts the moves, 
@@ -103,7 +151,7 @@ if (document.readyState === 'loading') {
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new MixOrMatch(100, cards);
+    let game = new MixOrMatch(5, cards);
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
