@@ -3,7 +3,7 @@ class AudioController {
     constructor() {
         this.bgMusic = new Audio('assets/audio/background-music.mp3');
         this.flipSound = new Audio('assets/audio/click.wav');
-        this.matchSound = new Audio('assets/audio/matched-sound.wav');
+        this.matchSound = new Audio('assets/audio/match-sound.wav');
         this.unmatchedSound = new Audio('assets/audio/unmatched.wav');
         this.gameOverSound = new Audio('assets/audio/fail.wav');
         this.winSound = new Audio('assets/audio/well-done.wav');
@@ -52,29 +52,97 @@ class MixOrMatch {
         this.matchedCards =[];
         this.busy = true;
 
+        //Clear previous countdown interval if it exists.
+        if (this.countDown) {
+            clearInterval(this.countDown);
+        }
+
         /**
          * When the game is over, this function starts a new game.
          */
         setTimeout(() => {
             this.audioController.startMusic();
+            this.hideCards();
             this.shuffleCards();
             this.countDown = this.startCountDown();
-            this.busy = false
+            this.busy = false;
         }, 400);
 
         /**
          * Sets the timer and moves
          */
-        this.hideCards();
         this.timer.innerText = this.timeRemaining;
         this.moves.innerText = this.totalClicks;
     }
     
     hideCards() {
         this.cardsArray.forEach(card => {
-            card.classList.remove('visible');
-            card.classList.remove('matched');
+            card.classList.remove('flip');
         });
+    }
+    
+    /**
+     * This function flips the cards and counts the moves, 
+     * when the cards are being clicked. It plays the flip sound.
+     */
+    flipCard(card) {
+        if (this.canFlipCard(card)) {
+            this.audioController.flip();
+            this.totalClicks++;
+            this.moves.innerText = this.totalClicks;
+            card.classList.add('flip');
+
+            if (this.cardCheck)
+            this.checkForMatch(card);
+            else
+            this.cardCheck = card;
+        }
+    }
+
+    /**
+     * Gets the card type value and compares with card to check and evaluates
+     * if this card matched to card to check.
+     * Else evaluates the mismatched function to card to check.
+     */
+    checkForMatch(card) {
+        if (this.getCardType(card) === this.getCardType(this.cardCheck))
+            this.cardMatch(card, this.cardCheck);
+        else 
+            this.misMatch(card, this.cardCheck);
+
+        this.cardCheck = null; 
+    }
+
+    /** 
+     * Push card 1 & 2, and evaluates the match cards if it is equal to the
+     * cardsArray and displays the win text overlay.
+     */
+    cardMatch(card1, card2) {
+        this.matchedCards.push(card1);
+        this.matchedCards.push(card2);
+        this.audioController.match();
+
+        if(this.matchedCards.length === this.cardsArray.length)
+      
+        this.win();
+    }
+    /**
+     * Flips the cards back, creates only one sec 
+     */
+    misMatch(card1, card2) {
+        this.busy = true;
+        setTimeout(() => {
+            card1.classList.remove('flip');
+            card2.classList.remove('flip');
+            this.busy = false;
+        }, 1000);
+    }
+
+    /**
+     * Gets the value card class
+     */
+    getCardType(card){
+        return card.getElementsByClassName('card-value')[0].src;
     }
 
     /**
@@ -96,29 +164,28 @@ class MixOrMatch {
     gameOver() {
         clearInterval(this.countDown);
         this.audioController.gameOver();
-        console.log('Game Over');
         const gameOverText = document.getElementById('game-over-text');
         gameOverText.classList.remove('hidden-overlay-text');
         gameOverText.classList.add('visible');
+        this.hideCards();
     }
 
-
-    /**
-     * This function flips the cards and counts the moves, 
-     * when the cards are being clicked. It plays the flip sound.
-     */
-    flipCard(card) {
-        if(this.canFlipCard(card)) {
-            this.audioController.flip();
-            this.totalClicks++;
-            this.moves.innerText = this.totalClicks;
-            card.classList.add('flip');
-        }
+    win() {
+        clearInterval(this.countDown);
+        this.audioController.win();
+        const winText = document.getElementById('win-text');
+        winText.classList.remove('hidden-overlay-text');
+        winText.classList.add('visible');
+        this.hideCards();
+    
     }
 
+   /**
+    * The current not flipped card, and not matched card, and
+    * not cards to check. All of the statements must return false in order to be true.
+    */
     canFlipCard(card) {
-        return true;
-        //return !this.busy && !this.matchedCards.includes(card) !== this.cardCheck;
+        return !this.busy && !this.matchedCards.includes(card) && card !== this.cardCheck;
     }
 
     /**
@@ -126,7 +193,7 @@ class MixOrMatch {
      * Shuffle adapted from Fisher-Yates algorithm.
      */
     shuffleCards() {
-        for(let i = this.cardsArray.length - 1; i > 0; i--) {
+        for (let i = this.cardsArray.length - 1; i > 0; i--) {
             let randIndex = Math.floor(Math.random() * (i+1));
             this.cardsArray[randIndex].style.order = i;
             this.cardsArray[i].style.order = randIndex;
@@ -164,5 +231,12 @@ function ready() {
         card.addEventListener('click', () => {
             game.flipCard(card);
         });
+    });
+
+    const restartButton = document.getElementById('restart-board');
+    restartButton.addEventListener('click', () => {
+        game.startGame();
+        resetFlipsCount();
+        resetTimer();
     });
 }
