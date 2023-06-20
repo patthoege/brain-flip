@@ -51,6 +51,7 @@ class MixOrMatch {
         this.timeRemaining = this.totalTime;
         this.matchedCards =[];
         this.busy = true;
+        console.log('starting another game...');
 
         //Clear previous countdown interval if it exists.
         if (this.countDown) {
@@ -62,7 +63,6 @@ class MixOrMatch {
          */
         setTimeout(() => {
             this.audioController.startMusic();
-            this.hideCards();
             this.shuffleCards();
             this.countDown = this.startCountDown();
             this.busy = false;
@@ -71,6 +71,7 @@ class MixOrMatch {
         /**
          * Sets the timer and moves
          */
+        this.hideCards();
         this.timer.innerText = this.timeRemaining;
         this.moves.innerText = this.totalClicks;
     }
@@ -153,7 +154,7 @@ class MixOrMatch {
             this.timeRemaining--;
             this.timer.innerText = this.timeRemaining;
             if (this.timeRemaining === 0)
-               this.gameOver()
+               this.gameOver();
         },900);
 
     }
@@ -177,7 +178,6 @@ class MixOrMatch {
         winText.classList.remove('hidden-overlay-text');
         winText.classList.add('visible');
         this.hideCards();
-    
     }
 
    /**
@@ -224,6 +224,7 @@ function ready() {
         overlay.addEventListener('click', () => {
             overlay.parentNode.removeChild(overlay);
             game.startGame();
+            console.log('starting ready function...');
         });
     });
 
@@ -236,7 +237,6 @@ function ready() {
     const restartButton = document.getElementById('restart-board');
     restartButton.addEventListener('click', () => {
         game.startGame();
-        resetFlipsCount();
-        resetTimer();
     });
 }
+

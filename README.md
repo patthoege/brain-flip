@@ -131,9 +131,9 @@ At the bottom of the website, you can find the footer section which includes fou
 # Technologies Used
 * [HTML5](https://en.wikipedia.org/wiki/HTML) - Provides the content and structure for the website.
 * [CSS3](https://en.wikipedia.org/wiki/CSS) - Provides the styling for the website.
-* [Gitpod](https://www.gitpod.io/) - Used to create and edit the website.
+* [Gitpod](https://www.gitpod.io/) - Used to share and edit the website.
 * [Visual Studio Code - VSCode](https://code.visualstudio.com/) - Local editor to edit the website.
-* [GitHub](https://github.com/patthoege/pawsome-care) - Used to host and deploy the website. 
+* [GitHub](https://github.com/patthoege/brain-flip) - Used to host and deploy the website. 
 * [Balsamiq](https://balsamiq.com/ ) - Used to create the wireframes.
 
 [Back to top](<#table-of-contents>)
@@ -141,7 +141,7 @@ At the bottom of the website, you can find the footer section which includes fou
 ## Testing
 * ## Code Validation
 
-    * The Pawsome Care website has been thoroughly tested. All the code has been validated via the [W3C HTML Validator](https://validator.w3.org/) and the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/). Minor errors were found when tested on [HTML Validation](https://validator.w3.org/) but were fixed immediately and documented below. 
+    * The BrainBlitz website has been thoroughly tested. All the code has been validated via the [W3C HTML Validator](https://validator.w3.org/),the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and [Jshint Validator](http:/jshint.com/) . Minor errors were found when tested on [HTML Validation](https://validator.w3.org/) but were fixed immediately and documented below. 
 
 ### Validator Testing
 <details><summary><b>W3C HTML Validator Image</b></summary>
@@ -179,11 +179,11 @@ At the bottom of the website, you can find the footer section which includes fou
 [Back to top](<#table-of-contents>)
 
 ### Experte Testing
-<details><summary><b>Experte Accessibility Report</b></summary>
+<details><summary><b></b></summary>
 
 ![Accessibility image](assets/)
 
-<a href="https://www.experte.com/accessibility" target="_blank" rel="noopener">Experte Accessibility Page</a>
+<a href="https://www.experte.com/accessibility" target="_blank" rel="noopener"> </a>
 </details><br />
 
 [Back to top](<#table-of-contents>)
@@ -220,7 +220,7 @@ Steps I took to deploy my website;
 
 - Go to the repository for brain-flip
 - Click the Settings tab and locate the Pages tab
-- Select to deploy from main branch
+- Select to deploy from the main branch
 - A few minutes later, upon refreshing the page, my site was live. <br />
 
 [Back to top](<#table-of-contents>)
@@ -243,16 +243,16 @@ Steps I took to deploy my website;
 ### Frameworks and Content
 * The website layout draws its inspiration from the Love Maths project. 
 * <a href="https://www.w3schools.com/">W3 Schools</a> was a source of help to learn the functions of a card game.
-* The <a href="https://www.youtube.com/watch?v=fYq5PXgSsbE&t=68s">Web Dev Simplified</a> was a very useful resource to learn CSS flex-box.
+* The <a href="">Web Dev Simplified</a> was a very useful resource to learn JavaScript Oriented Object Design Programming.
 * I research on various memory card games to gain insights. During this process, I drew inspiration from the <a href="">  </a> website and incorporated some of its key service points into my own.
-* <a href="https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj"> dev.to - How to shuffle arrays</a>
- 
+* <a href="https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj"> Dev.to - How to shuffle arrays</a>
 
+ 
 
 [Back to top](<#table-of-contents>)
 
 # Acknowledgments
-This website was created as part of my Full Stack Software Developer Diploma at the [Code Institute](https://codeinstitute.net/) and serves as my Portfolio Project 1. I am grateful to acknowledge my mentor [Martina Terlević](https://www.linkedin.com/in/martinaterlevic/), the Slack community, and the entire team at the Code Institute for their assistance and support throughout this process. Pawsome Care has been an invaluable learning experience for me, enabling me to gain greater confidence in my abilities to design, build, test and deploy a fully functional website.
+This memory card game was created as part of my Full Stack Software Developer Diploma at the [Code Institute](https://codeinstitute.net/) and serves as my Portfolio Project 2. I am grateful to acknowledge my mentor [Martina Terlević](https://www.linkedin.com/in/martinaterlevic/), the Tutor support, and the entire team at the Code Institute for their assistance and support throughout this process. BrainBlitz has been an invaluable learning experience for me, using the opportunity to gain greater insight into OPP and made me feel great achieving this work that contains the design, user interaction, debugging and deploying a fully functional memory card game.
 
 Patricia Höge 2023.
 

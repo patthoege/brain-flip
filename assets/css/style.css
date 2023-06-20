@@ -32,8 +32,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #1a01fb;
+    /* color: #ffffff; */
+    flex-direction: column;
+    background: #121FCF;
+    background: radial-gradient(
+        circle farthest-corner at bottom right,
+         #121FCF 22%, 
+         #8413A1 81%);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
 }
+
 .hidden-overlay-text {
     display: none !important;
 }
@@ -165,6 +174,10 @@ footer i {
 
 /*  -------------------- Media queries area */
 @media (max-width: 560px) {
+    .overlay-text {
+        display: block;
+        text-align: center;
+    }
     .game-container {
         grid-template-columns: repeat(2, auto);
     }
