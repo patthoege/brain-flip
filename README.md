@@ -1,6 +1,7 @@
 # Brain flip 
+Welcome to **Brain Flip**, the online memory card game that will put your memory skills to the test! Challenge yourself by choosing two cards at a time and playing against your memory. This classic game has been adapted for the computer, providing a fair and enjoyable experience to put your skills to the ultimate test.
 
-**Brain Flip** is a memory card game.
+As a user of this game, you'll be able to rely on your memory to make strategic decisions, and the computer will reveal its random choices to validate your results. Are you up for the challenge? Give it a try and see how well you can match and remember the cards in this exciting game of Brain Flip!
 
 ![Brain Flip's responsive design](assets/)
 
@@ -8,30 +9,30 @@ You can view the live site here - <a href="https://patthoege.github.io/brain-fli
 
 ## Table of Contents
 
-* [**UX**](<#user-experience-ux>)
-    * [Site Purpose](#site-purpose)
+* [**UX**](<#ux>)
+    * [User Stories](#user-stories)
     * [Site Goal](#site-goal)
-    * [Audience](#audience)
 * [**Design**](<#design>)
   + [Wireframes](#wireframes)
-  + [Color Scheme](#color-scheme)
   + [Typography](#typography)
   + [Imagery](#imagery)
 * [**Features**](<#features>)
-    
-    * [Navigation Menu](<#navigation-menu>)
-    * [Home](<#home>)
-    * [Services](<#services>)
-    * [Testimonials](<#testimonials>)
-    * [Sign Up Page](<#contact>)
-    * [Thank You Page](<#contact>)
+    * [Start Game](<#start-game>)
+    * [Soundtrack Player](<#soundtrack-player>)
+    * [Card Flip](<#card-flip>)
+    * [Card Match](<#card-match>)
+    * [Card Mismatched](<#card-mismatched>)
+    * [Timer](<#timer>)
+    * [Move Counter](<#move-counter>)
+    * [Game Over](<#game-over>)
+    * [Win](<#win>)
+    * [Button](<#button>)
     * [Footer](<#footer>)
 * [**Technologies Used**](<#technologies-used>)
 * [**Testing**](<#testing>)
-   *  [Validator testing](<#validator-testing>)
+   * [Validator testing](<#validator-testing>)
    * [Manual testing](<#manual-testing>)
    * [Lighthouse testing](<#lighthouse-testing>)
-   * [Experte testing](<#experte-testing>)
    * [Wave testing](<#wave-testing>)
    * [Bugs](<#bugs>)
 * [**Deployment**](<#deployment>)
@@ -44,17 +45,24 @@ You can view the live site here - <a href="https://patthoege.github.io/brain-fli
 
 ## UX
 
-### Site Purpose
-.<br /><br />
+### User stories
+**As a site user, I want to:**
+
+- Site Features Overview: Get a comprehensive overview of the site's features and functionalities.
+- Snappy Theme Blurb: Discover a short and captivating description of the site's theme.
+- Simple Game Rules: Read a brief and straightforward explanation of the game rule.
+- Click Interaction: Play the game with easy-click interactions, including the ability to toggle cards and enjoy exciting sound effects.
+- Soundtrack: Experience an exhilarating background music track that intensifies as the game progresses, creating an immersive atmosphere.
+- Elapsed Time: Monitor the time that has passed while playing the game.
+- Move Counter: Keep track of the number of clicks you perform with a move counter.
+- Game Restart: Restart the game without the need to reload the page.
+- Footer Information: Easily find the site's creator on social media and GitHub platforms.
+<br /><br />
 [Back to top](<#table-of-contents>)
 
 ### Site Goal
-.<br /><br />
-[Back to top](<#table-of-contents>)
-
-### Audience
+The game is designed to match 16 cards within 90 seconds, ensuring a quick and engaging experience for the user. The rules and functionality are kept simple to ensure minimal time is required for learning and understanding.
 <br /><br />
-
 [Back to top](<#table-of-contents>)
 
 ## Design
@@ -80,50 +88,38 @@ The wireframes for the project can be found [here.](/assets)
 
 ## Features
 
-### Navigation Menu
- 
+### Start Game 
+When clicked, the overlay text will close and the game starts with a running timer and moving counter.
 
-<details><summary><b>Desktop Navigation Bar Image</b></summary>
+### Soundtrack Player
+Once the game begins, an immersive background music sets the tone for the gaming experience.
 
-![Nav Bar image](assets/)
-</details><br />
+### Card Flip
+When a card is clicked, the card flips over and shows an image. Playing the click sound to provide feedback and engage the user.
 
+### Card Match
+Matching card pairs remain face up. Playing the card-matched sound to provide feedback and engage the user.
 
-[Back to top](<#table-of-contents>)
+### Card mismatched
+Non-matching cards will flip back after 1 second.
 
-### Home
+### Timer
+The timer will start running at the start of a game / finish running on game completion.
 
+### Move Counter
+The mover counter will increment by 1 each time a card is clicked.
 
-<details><summary><b>Desktop Home Image</b></summary>
+### Game Over
+When the time runs up without completing the missing cards, the overlay game over will appear on the screen playing the game over sound and ask to play again. Resetting the time and the moving counter.
 
-![Nav Bar image](assets/)
-</details><br />
+### Win
+Once found all the matching cards, the overlay you won will appear on the screen playing the winning sound and ask to play again. Resetting the time and the moving counter.
 
-
-[Back to top](<#table-of-contents>)
-
-
-
-
-### Thank You Page
-After completing the sign-up process, users will be directed to the thank you page, where they will see a content text box thanking them for choosing Pawsome Care. In addition to the content, the thank you page also includes a button that allows users to return to the home page. This page serves as confirmation that their registration was successful and that they will soon be able to enjoy the benefits of our platform. The thank you page is a small but important detail that shows our commitment to customer satisfaction and appreciation for their trust in our services.
-
-<details><summary><b>Desktop Thank You Image</b></summary>
-
-![Nav Bar image](assets/)
-</details><br />
-
-
-[Back to top](<#table-of-contents>)
+### Button 
+When clicked, will reset the time, the moving counter and start the game again while playing the time as well.
 
 ### Footer 
-At the bottom of the website, you can find the footer section which includes four social network icons for Whatsapp, Facebook, Github, and Linkedin. Below the social network icons, you can find links to the home, services, and sign-up form pages. Finally, at the bottom of the footer, you can find the copyright information.
-
-<details><summary><b>Desktop Footer Image</b></summary>
-
-![Nav Bar image](assets/)
-</details><br />
-
+At the bottom of the website, you can find the footer section which includes two social network icons for Github, and Linkedin. Finally, at the bottom of the footer, you can find the copyright information.
 
 [Back to top](<#table-of-contents>)
 
@@ -141,7 +137,7 @@ At the bottom of the website, you can find the footer section which includes fou
 ## Testing
 * ## Code Validation
 
-    * The BrainBlitz website has been thoroughly tested. All the code has been validated via the [W3C HTML Validator](https://validator.w3.org/),the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and [Jshint Validator](http:/jshint.com/) . Minor errors were found when tested on [HTML Validation](https://validator.w3.org/) but were fixed immediately and documented below. 
+    * The Brain Flip website has been thoroughly tested. All the code has been validated via the [W3C HTML Validator](https://validator.w3.org/), the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and [Jshint Validator](http:/jshint.com/). Minor errors were found when tested on [HTML Validation](https://validator.w3.org/) but were fixed immediately and documented below. 
 
 ### Validator Testing
 <details><summary><b>W3C HTML Validator Image</b></summary>
@@ -164,28 +160,6 @@ At the bottom of the website, you can find the footer section which includes fou
 
 </details><br />
 
-<details><summary><b>Lighthouse Test SignUp Image</b></summary>
-
-![Lighthouse](assets/)
-
-</details><br />
-
-<details><summary><b>Lighthouse Test Thank You Image</b></summary>
-
-![Lighthouse](assets/)
-
-</details><br />
-
-[Back to top](<#table-of-contents>)
-
-### Experte Testing
-<details><summary><b></b></summary>
-
-![Accessibility image](assets/)
-
-<a href="https://www.experte.com/accessibility" target="_blank" rel="noopener"> </a>
-</details><br />
-
 [Back to top](<#table-of-contents>)
 
 ### Wave Testing
@@ -199,16 +173,30 @@ At the bottom of the website, you can find the footer section which includes fou
 [Back to top](<#table-of-contents>)
 
 * ## Browser Compatibility
-    * The website has had manual and responsive tests conducted on the below browsers.
-        * Google Chrome
-        * Mozilla Firefox
-        * Safari
-        <br /><br />
+        
+### Browser Testing
+* The website has had manual and responsive tests conducted on the below browsers. Ensuring functions are working as expected throughout browsers.
+
+| Browser     | Layout      | Functionality |
+| :---------: | :----------:| :-----------: |
+| Chrome      | ✔          | ✔             |
+| Firefox     | ✔          | ✔             |
+| Safari      | ✔          | ✔             |
+<br /><br />
+
+**Functionality:** 
+- Testing the complete functionality of the game. This includes:
+    - Soundtrack 
+    - Game functions 
+    - Timer
+    - Move Counter
+
 
 # Bugs
 
 ## Fixed bugs
-- 
+-  The overlay text to start a new game was not displaying after two games. The error was lying at my ready function where I removed the whole game text overlay div when you click on the game over text, so when I call the game over function again the div does not exist anymore which is why it is throwing an error. Instead of using remove child, I hide the div instead to solve the problem.
+![classList error - overlay text](assets/)
 - 
 - 
 
@@ -228,26 +216,23 @@ Steps I took to deploy my website;
 
 # Credits
 ### Content
-
 * The font came from [Google Fonts](https://fonts.google.com/)
-* The color palette was displayed by [Coolors](https://coolors.co/)
 * The icons came from [Font Awesome](https://fontawesome.com/)
 * The favicon came from [Icons8](https://icons8.de/icons/set/brain)
-* Converter image to webp format for better performance from [Convertio](https://convertio.co/) 
+* Converter image to png format for better performance from [Convertio](https://convertio.co/) 
 * The responsive preview image at the top of the README.md came from [AmIResponsive?](https://ui.dev/amiresponsive?)
 * The card pattern image came from [Pattern Monster](https://pattern.monster/)
+* The images came from [Pexels](https://www.pexels.com/) and [Freepik](https://www.freepik.com/)
+* The text title color came from [Text Gradient Color](https://www.cssportal.com/css-text-gradient-generator/)
+* The audio content came from [Open Game Art](https://opengameart.org/art-search?keys=click)
 
-### Media
-* The images came from [Pexels](https://www.pexels.com/) and [Freepik](https://www.freepik.com/).
-
-### Frameworks and Content
+### Frameworks and Code
 * The website layout draws its inspiration from the Love Maths project. 
-* <a href="https://www.w3schools.com/">W3 Schools</a> was a source of help to learn the functions of a card game.
+* <a href="https://www.w3schools.com/">W3 Schools</a> was a source of help to learn the methods/functions of a card game.
 * The <a href="">Web Dev Simplified</a> was a very useful resource to learn JavaScript Oriented Object Design Programming.
-* I research on various memory card games to gain insights. During this process, I drew inspiration from the <a href="">  </a> website and incorporated some of its key service points into my own.
-* <a href="https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj"> Dev.to - How to shuffle arrays</a>
-
- 
+I research various memory card games from students to gain insights. During this process, I incorporated some of their key illustration points into my own.
+* Research further how to shuffle from <a href="https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj"> Dev.to</a>
+* As I am very new to JS, I asked a developer friend about a better way to approach the code, he recommends to use Javascript classes(Object Oriented Design Pattern) I also did some research about how to use classes to have a more accessible and organized layout of code<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_classes"> JavaScript classes</a> and watch some tutorials.
 
 [Back to top](<#table-of-contents>)
 
@@ -257,8 +242,3 @@ This memory card game was created as part of my Full Stack Software Developer Di
 Patricia Höge 2023.
 
 [Back to top](<#table-of-contents>)
-
-
-
-#
-

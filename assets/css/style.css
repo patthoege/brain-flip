@@ -19,8 +19,27 @@ body {
 
 .website-title {
     text-align: center;
-    color: #1a01fb;
+    background: #8413A1;
+    background: linear-gradient(to right,
+       #8413A1 0%,  
+       #A117C4 30%, 
+       #3951ed 50%, 
+       #041f5d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
+.game-title {
+    background: #8413A1;
+    background: linear-gradient(to right,
+       #8413A1 0%,  
+       #A117C4 30%, 
+       #3951ed 50%, 
+       #041f5d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 /*  -------------------- Overlay text area */
 .overlay-text {
     position: fixed;
@@ -32,15 +51,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* color: #ffffff; */
     flex-direction: column;
-    background: #121FCF;
-    background: radial-gradient(
-        circle farthest-corner at bottom right,
-         #121FCF 22%, 
-         #8413A1 81%);
-         -webkit-background-clip: text;
-         -webkit-text-fill-color: transparent;
+    background: #8413A1;
+    background: linear-gradient(to right,
+       #8413A1 0%,  
+       #A117C4 30%, 
+       #0d1d86 50%, 
+       #041f5d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hidden-overlay-text {
@@ -96,6 +115,7 @@ body {
 }
 
 .card {
+    cursor: pointer;
     position: relative;
     background-color: black;
     border-radius: 5px;
@@ -139,6 +159,7 @@ body {
 }
 
 button {
+    cursor: pointer;
     padding: 5px;
     font-weight: bold;
     border-radius: 5px;

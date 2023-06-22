@@ -1,5 +1,6 @@
-//'This' creates audio objects declaration from the OOP (OBJECT ORIENTED DESIGN PATTERNS)
+// This creates an audio objects declaration in OBJECT ORIENTED DESIGN PATTERNS. ß
 class AudioController {
+    //This method declares every audio instance
     constructor() {
         this.bgMusic = new Audio('assets/audio/background-music.mp3');
         this.flipSound = new Audio('assets/audio/click.wav');
@@ -34,7 +35,9 @@ class AudioController {
         this.gameOverSound.play();
     }
 }
-
+/**
+ * This class creates the memory card game methods  
+ */
 class MixOrMatch {
     constructor(totalTime, cards) {
         this.cardsArray = cards;
@@ -51,16 +54,14 @@ class MixOrMatch {
         this.timeRemaining = this.totalTime;
         this.matchedCards =[];
         this.busy = true;
-        console.log('starting another game...');
-
+        console.log('starting game...');
+        
         //Clear previous countdown interval if it exists.
         if (this.countDown) {
             clearInterval(this.countDown);
         }
 
-        /**
-         * When the game is over, this function starts a new game.
-         */
+        //When the game is over, this function starts a new game.
         setTimeout(() => {
             this.audioController.startMusic();
             this.shuffleCards();
@@ -68,14 +69,14 @@ class MixOrMatch {
             this.busy = false;
         }, 400);
 
-        /**
-         * Sets the timer and moves
-         */
+        //Sets the timer and moves
         this.hideCards();
         this.timer.innerText = this.timeRemaining;
         this.moves.innerText = this.totalClicks;
     }
-    
+    /**
+     * Iterates through the cards array and removes the flip card from each.
+     */
     hideCards() {
         this.cardsArray.forEach(card => {
             card.classList.remove('flip');
@@ -83,8 +84,10 @@ class MixOrMatch {
     }
     
     /**
-     * This function flips the cards and counts the moves, 
-     * when the cards are being clicked. It plays the flip sound.
+     * Flips the cards, keeps track of the total clicks, 
+     * updates the moves display. It plays the flip sound.
+     * Checks if there is a prev. flipped card, 
+     * it checks if current card matches it.
      */
     flipCard(card) {
         if (this.canFlipCard(card)) {
@@ -92,7 +95,7 @@ class MixOrMatch {
             this.totalClicks++;
             this.moves.innerText = this.totalClicks;
             card.classList.add('flip');
-
+            
             if (this.cardCheck)
             this.checkForMatch(card);
             else
@@ -127,6 +130,7 @@ class MixOrMatch {
       
         this.win();
     }
+
     /**
      * Flips the cards back, creates only one sec 
      */
@@ -135,8 +139,10 @@ class MixOrMatch {
         setTimeout(() => {
             card1.classList.remove('flip');
             card2.classList.remove('flip');
+            this.audioController.unmatched();
             this.busy = false;
         }, 1000);
+        
     }
 
     /**
@@ -170,7 +176,9 @@ class MixOrMatch {
         gameOverText.classList.add('visible');
         this.hideCards();
     }
-
+    /**
+     * Sets the game overlay text and the win sound
+     */
     win() {
         clearInterval(this.countDown);
         this.audioController.win();
@@ -191,6 +199,7 @@ class MixOrMatch {
     /**
      * This function shuffles the order from the array. 
      * Shuffle adapted from Fisher-Yates algorithm.
+     * https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj
      */
     shuffleCards() {
         for (let i = this.cardsArray.length - 1; i > 0; i--) {
@@ -218,11 +227,11 @@ if (document.readyState === 'loading') {
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new MixOrMatch(5, cards);
+    let game = new MixOrMatch(90, cards);
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
-            overlay.parentNode.removeChild(overlay);
+            overlay.classList.add('hidden-overlay-text');
             game.startGame();
             console.log('starting ready function...');
         });
