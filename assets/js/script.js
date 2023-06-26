@@ -1,4 +1,4 @@
-// This creates an audio objects declaration in OBJECT ORIENTED DESIGN PATTERNS. ß
+// This creates an audio objects declaration in OBJECT ORIENTED DESIGN PATTERNS. 
 class AudioController {
     //This method declares every audio instance
     constructor() {
@@ -17,21 +17,39 @@ class AudioController {
         this.bgMusic.pause();
         this.bgMusic.currentTime = 0;
     }
+   
+    // Rewinds all files before it attempts to play any of them
+    pause() {
+        this.flipSound.pause();
+        this.flipSound.currentTime = 0;
+        this.matchSound.pause();
+        this.matchSound.currentTime = 0;
+        this.unmatchedSound.pause();
+        this.unmatchedSound.currentTime = 0;
+        this.gameOverSound.pause();
+        this.gameOverSound.currentTime = 0;
+        this.winSound.pause();
+        this.winSound.currentTime = 0;
+    }
+
     flip() {
+        this.pause();
         this.flipSound.play();
     }
     match() {
+        this.pause();
         this.matchSound.play();
     }
     unmatched() {
+        this.pause();
         this.unmatchedSound.play();
     }
     win() {
-        this.pauseMusic();
+        this.pause();
         this.winSound.play();
     }
     gameOver() {
-        this.pauseMusic();
+        this.pause();
         this.gameOverSound.play();
     }
 }
@@ -248,4 +266,3 @@ function ready() {
         game.startGame();
     });
 }
-

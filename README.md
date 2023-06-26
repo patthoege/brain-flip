@@ -233,6 +233,7 @@ Steps I took to deploy my website;
 I research various memory card games from students to gain insights. During this process, I incorporated some of their key illustration points into my own.
 * Research further how to shuffle from <a href="https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj"> Dev.to</a>
 * As I am very new to JS, I asked a developer friend about a better way to approach the code, he recommends to use Javascript classes(Object Oriented Design Pattern) I also did some research about how to use classes to have a more accessible and organized layout of code<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_classes"> JavaScript classes</a> and watch some tutorials.
+* https://webtips.dev/memory-game-in-javascript
 
 [Back to top](<#table-of-contents>)
 
