@@ -13,6 +13,7 @@ class AudioController {
     startMusic() {
         this.pause();
         this.bgMusic.play();
+        this.bgMusic.volume = 0.2;
     }
     pauseMusic() {
         this.bgMusic.pause();
@@ -38,7 +39,7 @@ class AudioController {
         this.flipSound.play();
     }
     match() {
-        this.pause();
+        // this.pause();
         this.matchSound.play();
     }
     unmatched() {

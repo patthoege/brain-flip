@@ -32,12 +32,16 @@ You can view the live site here - <a href="https://patthoege.github.io/brain-fli
    * [Validator testing](<#validator-testing>)
    * [Manual testing](<#manual-testing>)
    * [Lighthouse testing](<#lighthouse-testing>)
-   * [Bugs](<#bugs>)
+* [**Browser Compatibility**](<#browser-compatibility>)
+   * [Browser Testing](<#browser-testing>)
+   * [Functionality](<#functionality>)
+* [**Bugs**](<#bugs>)
+   * [Fixed Bugs](<#bugs>)
 * [**Deployment**](<#deployment>)
 * [**Credits**](<#credits>)
     * [**Content**](<#content>)
-    * [**Media**](<#media>)
-*  [**Acknowledgments**](<#acknowledgements>)
+    * [**Frameworks and Code**](<#frameworks-and-code>)
+*  [**Acknowledgments**](<#acknowledgments>)
 
 
 
@@ -55,12 +59,12 @@ You can view the live site here - <a href="https://patthoege.github.io/brain-fli
 - Move Counter: Keep track of the number of clicks you perform with a move counter.
 - Game Restart: Restart the game without the need to reload the page.
 - Footer Information: Easily find the site's creator on social media and GitHub platforms.
-<br /><br />
+
 [Back to top](<#table-of-contents>)
 
 ### Site Goal
 The game is designed to match 16 cards within 90 seconds, ensuring a quick and engaging experience for the user. The rules and functionality are kept simple to ensure minimal time is required for learning and understanding.
-<br /><br />
+
 [Back to top](<#table-of-contents>)
 
 ## Design
@@ -72,7 +76,7 @@ The wireframes for the project can be found [here.](/assets/images.readme/BrainF
 [Back to top](<#table-of-contents>)
 
 ### Typography
- Holtwood One SC is the main font family for the memory card game. Sans Serif, if the mentioned font can't be loaded.<br /><br /> 
+ Holtwood One SC is the main font family for the memory card game. Sans Serif, if the mentioned font can't be loaded.
 
 [Back to top](<#table-of-contents>)
 
@@ -92,7 +96,7 @@ When a card is clicked, the card flips over and shows an image. Playing the clic
 Matching card pairs remain face up. Playing the card-matched sound to provide feedback and engage the user.
 
 ### Card mismatched
-Non-matching cards will flip back after 1 second.
+Non-matching cards will flip back after 1,5 seconds.
 
 ### Timer
 The timer will start running at the start of a game/finish running on game completion.
@@ -168,23 +172,29 @@ At the bottom of the website, you can find the footer section which includes two
 | Chrome      | ✔          | ✔             |
 | Firefox     | ✔          | ✔             |
 | Safari      | ✔          | ✔             |
-<br /><br />
 
-**Functionality:** 
+[Back to top](<#table-of-contents>)
+
+###Functionality
 - Testing the complete functionality of the game. This includes:
     - Soundtrack 
     - Game functions 
     - Timer
     - Move Counter
 
+[Back to top](<#table-of-contents>)
 
 # Bugs
 
 ## Fixed bugs
--  The overlay text to start a new game was not displaying after two games. The error was lying at my ready function where I removed the whole game text overlay div when you click on the game over text, so when I call the game over function again the div does not exist anymore which is why it is throwing an error. Instead of using remove child, I hide the div instead to solve the problem.
+1.  The overlay text to start a new game was not displaying after two games. The error was lying at my ready function where I removed the whole game text overlay div when you click on the game over text, so when I call the game over function again the div does not exist anymore which is why it is throwing an error. Instead of using remove child, I hide the div instead to solve the problem.
 ![classList error - overlay text](assets/images.readme/remove-class-overlay-text.jpg)
-- I had an issue with the matching sound effect when the player finds two pairs, one after the other, the second pair of cards, the matched cards audio didn't work. For that, I got help from the tutor who recommend that I should rewind the audio effects. Audio files aren't 'rewound' after being played in the audioController class. Hence, the pause() method was fixed to resolve the issue to make the sound effects work.
--  
+
+2. I encountered a problem with the matching sound effect in my game when the player finds two pairs consecutively. The audio for the second pair of matched cards did not play. To address this issue, I sought assistance from a tutor who suggested rewinding the audio effects. In the audioController class, the audio files were not being rewound after being played. Consequently, I made modifications to the pause() method to rectify the problem and ensure proper functionality of the sound effects.
+
+3. To review the last loose ends in developer tools. All the functions appear to be working correctly, but I encountered a browser limitation, due to the async nature of things, in the console when playing the game. The error message is **"Uncaught (in promise) DOMException: The play() request was interrupted by a call to pause()."** I believe this issue is related to how I have implemented the audio pause layout, which is causing conflicts between multiple play/pause requests for an audio element. To address this problem, I sought assistance from a tutor who suggested commenting out all instances of "this.pause()" in the audio code. From my side, even after clearing cache, I still encountered the same problem as described in the **2. paragraph.**  Specifically, the audio for matching cards is not being played after successfully finding two matching pairs in a row, but for the tutor, the audio was working as supposed to. So I only commented *match()* from *this.pause()* **line code : 42** in order to make the sound work.![Uncaught error DOMException](assets/images.readme/uncaught-error-DOMException.png)
+
+[Back to top](<#table-of-contents>)
 
 ## Deployment
 
@@ -211,6 +221,8 @@ Steps I took to deploy my website;
 * The images came from [Pexels](https://www.pexels.com/) and [Freepik](https://www.freepik.com/)
 * The text title color came from [Text Gradient Color](https://www.cssportal.com/css-text-gradient-generator/)
 * The audio content came from [Open Game Art](https://opengameart.org/art-search?keys=click)
+
+[Back to top](<#table-of-contents>)
 
 ### Frameworks and Code
 * The website layout draws its inspiration from the Love Maths project. 
