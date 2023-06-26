@@ -3,7 +3,7 @@ Welcome to **Brain Flip**, the online memory card game that will put your memory
 
 As a user of this game, you'll be able to rely on your memory to make strategic decisions, and the computer will reveal its random choices to validate your results. Are you up for the challenge? Give it a try and see how well you can match and remember the cards in this exciting game of Brain Flip!
 
-![Brain Flip's responsive design](assets/)
+![Brain Flip's responsive design](assets/images.readme/amiresponsive.png)
 
 You can view the live site here - <a href="https://patthoege.github.io/brain-flip/" target="_blank" rel="noopener">Brain Flip</a>
 
@@ -15,7 +15,6 @@ You can view the live site here - <a href="https://patthoege.github.io/brain-fli
 * [**Design**](<#design>)
   + [Wireframes](#wireframes)
   + [Typography](#typography)
-  + [Imagery](#imagery)
 * [**Features**](<#features>)
     * [Start Game](<#start-game>)
     * [Soundtrack Player](<#soundtrack-player>)
@@ -33,7 +32,6 @@ You can view the live site here - <a href="https://patthoege.github.io/brain-fli
    * [Validator testing](<#validator-testing>)
    * [Manual testing](<#manual-testing>)
    * [Lighthouse testing](<#lighthouse-testing>)
-   * [Wave testing](<#wave-testing>)
    * [Bugs](<#bugs>)
 * [**Deployment**](<#deployment>)
 * [**Credits**](<#credits>)
@@ -69,22 +67,15 @@ The game is designed to match 16 cards within 90 seconds, ensuring a quick and e
 
 ### Wireframes
 
-The wireframes for the project can be found [here.](/assets)
-
-### Color Scheme
-
-
-![Color Palate image](assets/)
+The wireframes for the project can be found [here.](/assets/images.readme/BrainFlip%20-%20Framework.pdf)
 
 [Back to top](<#table-of-contents>)
 
 ### Typography
- Sans Serif, if the mentioned fonts can't be loaded.<br /><br /> 
+ Holtwood One SC is the main font family for the memory card game. Sans Serif, if the mentioned font can't be loaded.<br /><br /> 
+
 [Back to top](<#table-of-contents>)
 
-### Imagery
-<br /><br />
-[Back to top](<#table-of-contents>)
 
 ## Features
 
@@ -104,7 +95,7 @@ Matching card pairs remain face up. Playing the card-matched sound to provide fe
 Non-matching cards will flip back after 1 second.
 
 ### Timer
-The timer will start running at the start of a game / finish running on game completion.
+The timer will start running at the start of a game/finish running on game completion.
 
 ### Move Counter
 The mover counter will increment by 1 each time a card is clicked.
@@ -142,12 +133,16 @@ At the bottom of the website, you can find the footer section which includes two
 ### Validator Testing
 <details><summary><b>W3C HTML Validator Image</b></summary>
 
-![W3C HTML Validator image](assets/)
+![W3C HTML Validator image](assets/images.readme/html-validator.png)
 </details><br />
 
 <details><summary><b>W3C CSS Validator Image</b></summary>
 
-![W3C CSS Validator image](assets/)
+![W3C CSS Validator image](assets/images.readme/css-validator.png)
+</details><br />
+<details><summary><b>JSHINT Validator Image</b></summary>
+
+![JSHINT Validator image](assets/images.readme/jshint.png)
 </details><br />
 
 [Back to top](<#table-of-contents>)
@@ -162,15 +157,6 @@ At the bottom of the website, you can find the footer section which includes two
 
 [Back to top](<#table-of-contents>)
 
-### Wave Testing
-<details><summary><b>Wave Evaluation Tools Report</b></summary>
-
-![Wave testing image](assets/)
-
-<a href="https://wave.webaim.org/" target="_blank" rel="noopener">Webaiam Page</a>
-</details><br />
-
-[Back to top](<#table-of-contents>)
 
 * ## Browser Compatibility
         
@@ -196,9 +182,9 @@ At the bottom of the website, you can find the footer section which includes two
 
 ## Fixed bugs
 -  The overlay text to start a new game was not displaying after two games. The error was lying at my ready function where I removed the whole game text overlay div when you click on the game over text, so when I call the game over function again the div does not exist anymore which is why it is throwing an error. Instead of using remove child, I hide the div instead to solve the problem.
-![classList error - overlay text](assets/)
-- 
-- 
+![classList error - overlay text](assets/images.readme/remove-class-overlay-text.jpg)
+- I had an issue with the matching sound effect when the player finds two pairs, one after the other, the second pair of cards, the matched cards audio didn't work. For that, I got help from the tutor who recommend that I should rewind the audio effects. Audio files aren't 'rewound' after being played in the audioController class. Hence, the pause() method was fixed to resolve the issue to make the sound effects work.
+-  
 
 ## Deployment
 
@@ -229,7 +215,7 @@ Steps I took to deploy my website;
 ### Frameworks and Code
 * The website layout draws its inspiration from the Love Maths project. 
 * <a href="https://www.w3schools.com/">W3 Schools</a> was a source of help to learn the methods/functions of a card game.
-* The <a href="">Web Dev Simplified</a> was a very useful resource to learn JavaScript Oriented Object Design Programming.
+* The <a href="https://www.youtube.com/watch?v=3uuQ3g92oPQ&t=2846s">PortEXE</a> was a very useful resource to learn JavaScript Oriented Object Design Programming.
 I research various memory card games from students to gain insights. During this process, I incorporated some of their key illustration points into my own.
 * Research further how to shuffle from <a href="https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj"> Dev.to</a>
 * As I am very new to JS, I asked a developer friend about a better way to approach the code, he recommends to use Javascript classes(Object Oriented Design Pattern) I also did some research about how to use classes to have a more accessible and organized layout of code<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_classes"> JavaScript classes</a> and watch some tutorials.

@@ -11,6 +11,7 @@ class AudioController {
     }
 
     startMusic() {
+        this.pause();
         this.bgMusic.play();
     }
     pauseMusic() {
@@ -143,10 +144,12 @@ class MixOrMatch {
         this.matchedCards.push(card1);
         this.matchedCards.push(card2);
         this.audioController.match();
-
-        if(this.matchedCards.length === this.cardsArray.length)
-      
-        this.win();
+        // to delay the execution of a callback function(win)
+        if(this.matchedCards.length === this.cardsArray.length) {
+            setTimeout(() => {
+                 this.win();
+            }, 1500);
+        }
     }
 
     /**
@@ -159,7 +162,7 @@ class MixOrMatch {
             card2.classList.remove('flip');
             this.audioController.unmatched();
             this.busy = false;
-        }, 1000);
+        }, 1500);
         
     }
 
@@ -188,6 +191,7 @@ class MixOrMatch {
      */
     gameOver() {
         clearInterval(this.countDown);
+        this.audioController.pauseMusic();
         this.audioController.gameOver();
         const gameOverText = document.getElementById('game-over-text');
         gameOverText.classList.remove('hidden-overlay-text');
@@ -199,6 +203,7 @@ class MixOrMatch {
      */
     win() {
         clearInterval(this.countDown);
+        this.audioController.pauseMusic();
         this.audioController.win();
         const winText = document.getElementById('win-text');
         winText.classList.remove('hidden-overlay-text');
