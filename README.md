@@ -69,7 +69,7 @@ The game is designed to match 16 cards within 90 seconds, ensuring a quick and e
 ## Design
 
 ### Wireframes
-The wireframes for the project can be found [here.](/assets/images.readme/brainflip%20-%20framework.pdf)
+The wireframes for the project can be found [here.](/assets/images.readme/framework.pdf)
 
 [Back to top](<#table-of-contents>)
 
@@ -106,7 +106,7 @@ When the time runs up without completing the missing cards, the overlay game ove
 Once found all the matching cards, the overlay you won will appear on the screen playing the winning sound and ask to play again. Resetting the time and the moving counter.
 
 ### Button 
-When clicked, will reset the time, the moving counter and start the game again while playing the time as well.
+When clicked, will reset the time, and the moving counter and start the game again while playing the time as well.
 
 ### Footer 
 At the bottom of the website, you can find the footer section which includes two social network icons for Github, and Linkedin. Finally, at the bottom of the footer, you can find the copyright information.
@@ -150,7 +150,7 @@ At the bottom of the website, you can find the footer section which includes two
 
 <details><summary><b>Lighthouse Test Index Image</b></summary>
 
-![Lighthouse](assets/)
+![Lighthouse](assets/images.readme/lighthouse.png)
 
 </details><br />
 
@@ -187,7 +187,7 @@ At the bottom of the website, you can find the footer section which includes two
 
 2. I encountered a problem with the matching sound effect in my game when the player finds two pairs consecutively. The audio for the second pair of matched cards did not play. To address this issue, I sought assistance from a tutor who suggested rewinding the audio effects. In the audioController class, the audio files were not being rewound after being played. Consequently, I made modifications to the pause() method to rectify the problem and ensure proper functionality of the sound effects.
 
-3. To review the last loose ends in developer tools. All the functions appear to be working correctly, but I encountered a browser limitation, due to the async nature of things, in the console when playing the game. The error message is **"Uncaught (in promise) DOMException: The play() request was interrupted by a call to pause()."** I believe this issue is related to how I have implemented the audio pause layout, which is causing conflicts between multiple play/pause requests for an audio element. To address this problem, I sought assistance from a tutor who suggested commenting out all instances of "this.pause()" in the audio code. From my side, even after clearing cache, I still encountered the same problem as described in the **2. paragraph.**  Specifically, the audio for matching cards is not being played after successfully finding two matching pairs in a row, but for the tutor, the audio was working as supposed to. So I only commented *match()* from *this.pause()* **line code : 42**  to make the sound work.![Uncaught error DOMException](assets/images.readme/uncaught-error-DOMException.png)
+3. To review the last loose ends in developer tools. All the functions appear to be working correctly, but I encountered a browser limitation, due to the async nature of things, in the console when playing the game. The error message is **"Uncaught (in promise) DOMException: The play() request was interrupted by a call to pause()."** I believe this issue is related to how I have implemented the audio pause layout, which is causing conflicts between multiple play/pause requests for an audio element. To address this problem, I sought assistance from a tutor who suggested commenting out all instances of "this.pause()" in the audio code. From my side, even after clearing the cache, I still encountered the same problem as described in the **2. paragraph.**  Specifically, the audio for matching cards is not being played after successfully finding two matching pairs in a row, but for the tutor, the audio was working as supposed to. So I only commented *match()* from *this.pause()* **line code: 42**  to make the sound work.![Uncaught error DOMException](assets/images.readme/uncaught-error-DOMException.png)
 
 [Back to top](<#table-of-contents>)
 
@@ -211,7 +211,7 @@ Steps I took to deploy my website;
 * The icons came from [Font Awesome](https://fontawesome.com/)
 * The favicon came from [Icons8](https://icons8.de/icons/set/brain)
 * Converter image to png format for better performance from [Convertio](https://convertio.co/) 
-* The responsive preview image at the top of the README.md came from [AmIResponsive?](https://ui.dev/amiresponsive?)
+* The responsive preview image at the top of the README.md came from [Am I Responsive?](https://ui.dev/amiresponsive?)
 * The card pattern image came from [Pattern Monster](https://pattern.monster/)
 * The images came from [Pexels](https://www.pexels.com/) and [Freepik](https://www.freepik.com/)
 * The text title color came from [Text Gradient Color](https://www.cssportal.com/css-text-gradient-generator/)
