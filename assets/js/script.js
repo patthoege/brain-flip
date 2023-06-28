@@ -9,16 +9,6 @@ class AudioController {
         this.gameOverSound = new Audio('assets/audio/fail.wav');
         this.winSound = new Audio('assets/audio/well-done.wav');
     }
-
-    startMusic() {
-        this.pause();
-        this.bgMusic.play();
-        this.bgMusic.volume = 0.2;
-    }
-    pauseMusic() {
-        this.bgMusic.pause();
-        this.bgMusic.currentTime = 0;
-    }
    
     // Rewinds all files before it attempts to play any of them
     pause() {
@@ -37,14 +27,17 @@ class AudioController {
     flip() {
         this.pause();
         this.flipSound.play();
+        this.flipSound.volume = 0.3;
     }
     match() {
         // this.pause();
         this.matchSound.play();
+        this.matchSound.volume = 0.3;
     }
     unmatched() {
         this.pause();
         this.unmatchedSound.play();
+        this.unmatchedSound.volume = 0.3;
     }
     win() {
         this.pause();
@@ -74,7 +67,6 @@ class MixOrMatch {
         this.timeRemaining = this.totalTime;
         this.matchedCards =[];
         this.busy = true;
-        console.log('starting game...');
         
         //Clear previous countdown interval if it exists.
         if (this.countDown) {
@@ -83,7 +75,6 @@ class MixOrMatch {
 
         //When the game is over, this function starts a new game.
         setTimeout(() => {
-            this.audioController.startMusic();
             this.shuffleCards();
             this.countDown = this.startCountDown();
             this.busy = false;
@@ -192,7 +183,6 @@ class MixOrMatch {
      */
     gameOver() {
         clearInterval(this.countDown);
-        this.audioController.pauseMusic();
         this.audioController.gameOver();
         const gameOverText = document.getElementById('game-over-text');
         gameOverText.classList.remove('hidden-overlay-text');
@@ -204,7 +194,6 @@ class MixOrMatch {
      */
     win() {
         clearInterval(this.countDown);
-        this.audioController.pauseMusic();
         this.audioController.win();
         const winText = document.getElementById('win-text');
         winText.classList.remove('hidden-overlay-text');
@@ -257,7 +246,6 @@ function ready() {
         overlay.addEventListener('click', () => {
             overlay.classList.add('hidden-overlay-text');
             game.startGame();
-            console.log('starting ready function...');
         });
     });
 

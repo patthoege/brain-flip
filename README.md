@@ -17,7 +17,6 @@ You can view the live site here - <a href="https://patthoege.github.io/brain-fli
   + [Typography](#typography)
 * [**Features**](<#features>)
     * [Start Game](<#start-game>)
-    * [Soundtrack Player](<#soundtrack-player>)
     * [Card Flip](<#card-flip>)
     * [Card Match](<#card-match>)
     * [Card Mismatched](<#card-mismatched>)
@@ -70,13 +69,12 @@ The game is designed to match 16 cards within 90 seconds, ensuring a quick and e
 ## Design
 
 ### Wireframes
-
-The wireframes for the project can be found [here.](/assets/images.readme/BrainFlip%20-%20Framework.pdf)
+The wireframes for the project can be found [here.](/assets/images.readme/brainflip%20-%20framework.pdf)
 
 [Back to top](<#table-of-contents>)
 
 ### Typography
- Holtwood One SC is the main font family for the memory card game. Sans Serif, if the mentioned font can't be loaded.
+Holtwood One SC is the main font family for the memory card game. Sans Serif, if the mentioned font can't be loaded.
 
 [Back to top](<#table-of-contents>)
 
@@ -85,9 +83,6 @@ The wireframes for the project can be found [here.](/assets/images.readme/BrainF
 
 ### Start Game 
 When clicked, the overlay text will close and the game starts with a running timer and moving counter.
-
-### Soundtrack Player
-Once the game begins, an immersive background music sets the tone for the gaming experience.
 
 ### Card Flip
 When a card is clicked, the card flips over and shows an image. Playing the click sound to provide feedback and engage the user.
@@ -105,7 +100,7 @@ The timer will start running at the start of a game/finish running on game compl
 The mover counter will increment by 1 each time a card is clicked.
 
 ### Game Over
-When the time runs up without completing the missing cards, the overlay game over will appear on the screen playing the game over sound and ask to play again. Resetting the time and the moving counter.
+When the time runs up without completing the missing cards, the overlay game over will appear on the screen playing the game over sound and asking to play again. Resetting the time and the moving counter.
 
 ### Win
 Once found all the matching cards, the overlay you won will appear on the screen playing the winning sound and ask to play again. Resetting the time and the moving counter.
@@ -192,7 +187,7 @@ At the bottom of the website, you can find the footer section which includes two
 
 2. I encountered a problem with the matching sound effect in my game when the player finds two pairs consecutively. The audio for the second pair of matched cards did not play. To address this issue, I sought assistance from a tutor who suggested rewinding the audio effects. In the audioController class, the audio files were not being rewound after being played. Consequently, I made modifications to the pause() method to rectify the problem and ensure proper functionality of the sound effects.
 
-3. To review the last loose ends in developer tools. All the functions appear to be working correctly, but I encountered a browser limitation, due to the async nature of things, in the console when playing the game. The error message is **"Uncaught (in promise) DOMException: The play() request was interrupted by a call to pause()."** I believe this issue is related to how I have implemented the audio pause layout, which is causing conflicts between multiple play/pause requests for an audio element. To address this problem, I sought assistance from a tutor who suggested commenting out all instances of "this.pause()" in the audio code. From my side, even after clearing cache, I still encountered the same problem as described in the **2. paragraph.**  Specifically, the audio for matching cards is not being played after successfully finding two matching pairs in a row, but for the tutor, the audio was working as supposed to. So I only commented *match()* from *this.pause()* **line code : 42** in order to make the sound work.![Uncaught error DOMException](assets/images.readme/uncaught-error-DOMException.png)
+3. To review the last loose ends in developer tools. All the functions appear to be working correctly, but I encountered a browser limitation, due to the async nature of things, in the console when playing the game. The error message is **"Uncaught (in promise) DOMException: The play() request was interrupted by a call to pause()."** I believe this issue is related to how I have implemented the audio pause layout, which is causing conflicts between multiple play/pause requests for an audio element. To address this problem, I sought assistance from a tutor who suggested commenting out all instances of "this.pause()" in the audio code. From my side, even after clearing cache, I still encountered the same problem as described in the **2. paragraph.**  Specifically, the audio for matching cards is not being played after successfully finding two matching pairs in a row, but for the tutor, the audio was working as supposed to. So I only commented *match()* from *this.pause()* **line code : 42**  to make the sound work.![Uncaught error DOMException](assets/images.readme/uncaught-error-DOMException.png)
 
 [Back to top](<#table-of-contents>)
 
@@ -231,12 +226,12 @@ Steps I took to deploy my website;
 I research various memory card games from students to gain insights. During this process, I incorporated some of their key illustration points into my own.
 * Research further how to shuffle from <a href="https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj"> Dev.to</a>
 * As I am very new to JS, I asked a developer friend about a better way to approach the code, he recommends to use Javascript classes(Object Oriented Design Pattern) I also did some research about how to use classes to have a more accessible and organized layout of code<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_classes"> JavaScript classes</a> and watch some tutorials.
-* https://webtips.dev/memory-game-in-javascript
+
 
 [Back to top](<#table-of-contents>)
 
 # Acknowledgments
-This memory card game was created as part of my Full Stack Software Developer Diploma at the [Code Institute](https://codeinstitute.net/) and serves as my Portfolio Project 2. I am grateful to acknowledge my mentor [Martina Terlević](https://www.linkedin.com/in/martinaterlevic/), the Tutor support, and the entire team at the Code Institute for their assistance and support throughout this process. BrainBlitz has been an invaluable learning experience for me, using the opportunity to gain greater insight into OPP and made me feel great achieving this work that contains the design, user interaction, debugging and deploying a fully functional memory card game.
+This memory card game was created as part of my Full Stack Software Developer Diploma at the [Code Institute](https://codeinstitute.net/) and serves as my Portfolio Project 2. I am grateful to acknowledge my mentor [Martina Terlević](https://www.linkedin.com/in/martinaterlevic/) and the Tutor support for their assistance and support throughout this process. BrainFlip has been an invaluable learning experience for me, using the opportunity to gain greater insight into OPP and made me feel great achieving this work that contains the design, user interaction, debugging and deploying a fully functional memory card game.
 
 Patricia Höge 2023.
 
