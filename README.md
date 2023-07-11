@@ -167,7 +167,7 @@ At the bottom of the website, you can find the footer section which includes two
 
 [Back to top](<#table-of-contents>)
 
-###Functionality
+### Functionality
 - Testing the complete functionality of the game. This includes:
     - Soundtrack 
     - Game functions 
