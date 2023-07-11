@@ -53,7 +53,6 @@ You can view the live site here - <a href="https://patthoege.github.io/brain-fli
 - Snappy Theme Blurb: Discover a short and captivating description of the site's theme.
 - Simple Game Rules: Read a brief and straightforward explanation of the game rule.
 - Click Interaction: Play the game with easy-click interactions, including the ability to toggle cards and enjoy exciting sound effects.
-- Soundtrack: Experience an exhilarating background music track that intensifies as the game progresses, creating an immersive atmosphere.
 - Elapsed Time: Monitor the time that has passed while playing the game.
 - Move Counter: Keep track of the number of clicks you perform with a move counter.
 - Game Restart: Restart the game without the need to reload the page.
@@ -143,8 +142,6 @@ At the bottom of the website, you can find the footer section which includes two
 
 ![JSHINT Validator image](assets/images.readme/jshint.png)
 </details><br />
-
-[Back to top](<#table-of-contents>)
 
 ### Lighthouse Testing
 
