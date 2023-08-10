@@ -18,7 +18,7 @@
 <!-- Start: Overlay text -->
 <div class="overlay-text visible">
     Click to Start
-    <span class="overlay-text-small">Click and find a match!</span>
+    <span class="overlay-text-small">and find a match! </br> or </br> choose the level </br> you want to play</span>
 </div>
 
 <div id="game-over-text" class="overlay-text hidden-overlay-text">
@@ -33,7 +33,16 @@
 <!-- End: Overlay text -->
 
 <!-- Start: Memory Card Game Area -->
+    <!-- Difficulty buttons -->
+    <div class="difficulty-module">   
+        <button class="difficulty-button" data-level="easy">Easy</button>
+        <button class="difficulty-button" data-level="medium">Medium</button>
+        <button class="difficulty-button" data-level="hard">Hard</button>
+    </div>
+<!-- Game container area -->
 <div class="game-container">   
+
+
     <div class="game-info-container">
         <div class="game-info">
             Time <span id="time-countdown">90</span>

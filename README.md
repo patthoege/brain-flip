@@ -83,11 +83,27 @@ Holtwood One SC is the main font family for the memory card game. Sans Serif, if
 ### Start Game 
 When clicked, the overlay text will close and the game starts with a running timer and moving counter.
 
+<details><summary><b>Start Game Image</b></summary>
+
+![Start Game Image](assets/)
+</details><br />
+
 ### Card Flip
 When a card is clicked, the card flips over and shows an image. Playing the click sound to provide feedback and engage the user.
 
+
+<details><summary><b>Card Flip Image</b></summary>
+
+![Card Flip Image](assets/)
+</details><br />
+
 ### Card Match
 Matching card pairs remain face up. Playing the card-matched sound to provide feedback and engage the user.
+
+<details><summary><b>Card Match Image</b></summary>
+
+![Card Match Image](assets/)
+</details><br />
 
 ### Card mismatched
 Non-matching cards will flip back after 1,5 seconds.
@@ -95,20 +111,44 @@ Non-matching cards will flip back after 1,5 seconds.
 ### Timer
 The timer will start running at the start of a game/finish running on game completion.
 
+<details><summary><b>Timer Image</b></summary>
+
+![Timer Image](assets/)
+</details><br />
+
 ### Move Counter
 The mover counter will increment by 1 each time a card is clicked.
+
+<details><summary><b>Move Counter Image</b></summary>
+
+![Move Counter Image](assets/)
+</details><br />
 
 ### Game Over
 When the time runs up without completing the missing cards, the overlay game over will appear on the screen playing the game over sound and asking to play again. Resetting the time and the moving counter.
 
+<details><summary><b>Game Over Image</b></summary>
+
+![Game Over Image](assets/)
+</details><br />
+
 ### Win
 Once found all the matching cards, the overlay you won will appear on the screen playing the winning sound and ask to play again. Resetting the time and the moving counter.
 
+<details><summary><b>Win Image</b></summary>
+
+![Win Image](assets/)
+</details><br />
 ### Button 
 When clicked, will reset the time, and the moving counter and start the game again while playing the time as well.
 
 ### Footer 
 At the bottom of the website, you can find the footer section which includes two social network icons for Github, and Linkedin. Finally, at the bottom of the footer, you can find the copyright information.
+
+<details><summary><b>Footer Image</b></summary>
+
+![Footer Image](assets/)
+</details><br />
 
 [Back to top](<#table-of-contents>)
 
@@ -219,10 +259,11 @@ Steps I took to deploy my website;
 ### Frameworks and Code
 * The website layout draws its inspiration from the Love Maths project. 
 * <a href="https://www.w3schools.com/">W3 Schools</a> was a source of help to learn the methods/functions of a card game.
-* The <a href="https://www.youtube.com/watch?v=3uuQ3g92oPQ&t=2846s">PortEXE</a> was a very useful resource to learn JavaScript Oriented Object Design Programming.
+* The <a href="https://www.youtube.com/watch?v=3uuQ3g92oPQ&t=2846s">PortEXE</a> was a very useful resource to learn JavaScript Oriented Object Design Programming who also collaborated with <a href="https://codepen.io/WebDevSimplified/pen/EdEjyx">WebDevSimplified</a> from his tutorial and I have implemented and modified it on my own.
 I research various memory card games from students to gain insights. During this process, I incorporated some of their key illustration points into my own.
 * Research further how to shuffle from <a href="https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj"> Dev.to</a>
 * As I am very new to JS, I asked a developer friend about a better way to approach the code, he recommends to use Javascript classes(Object Oriented Design Pattern) I also did some research about how to use classes to have a more accessible and organized layout of code<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_classes"> JavaScript classes</a> and watch some tutorials.
+
 
 
 [Back to top](<#table-of-contents>)

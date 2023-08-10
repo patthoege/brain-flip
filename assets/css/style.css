@@ -40,6 +40,14 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+.difficulty-module {
+    display: flex;
+	justify-content: center;
+    align-items: center;
+    margin: 10px 5px;
+    gap: 10px;
+}
+
 /*  -------------------- Overlay text area */
 .overlay-text {
     position: fixed;
@@ -69,6 +77,11 @@ body {
 
 .overlay-text-small {
     font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
 }
 
 .overlay-text.visible {
