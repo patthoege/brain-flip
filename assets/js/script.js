@@ -59,6 +59,7 @@ class MixOrMatch {
         this.timer = document.getElementById('time-countdown');
         this.moves = document.getElementById('flips');
         this.audioController = new AudioController();
+        this.difficultyButtons = document.querySelectorAll('.difficulty-button');
     }
   
     startGame() {
@@ -242,9 +243,11 @@ function ready() {
     let cards = Array.from(document.getElementsByClassName('card'));
     let game = new MixOrMatch(90, cards);
 
+
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
             overlay.classList.add('hidden-overlay-text');
+            
             game.startGame();
         });
     });
