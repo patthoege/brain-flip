@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap');
 
-/*  -------------------- Global area */
+/*  ---------------------------------------- Global area */
 * {
     padding: 0;
     margin: 0;
@@ -48,7 +48,7 @@ body {
     gap: 10px;
 }
 
-/*  -------------------- Overlay text area */
+/*  ---------------------------------------- Overlay text area */
 .overlay-text {
     position: fixed;
     top: 0;
@@ -99,7 +99,7 @@ body {
     }
   }
 
-/*  -------------------- Game area */
+/*  ---------------------------------------- Game area */
 .game-title {
     text-align: center;
     font-size: 20px;
@@ -163,7 +163,7 @@ body {
 }
 
 
-/*  -------------------- Button area */
+/*  ---------------------------------------- Button area */
 .reset {
     display: flex;
     justify-content: center;
@@ -185,7 +185,7 @@ button:hover {
     background-color: #041f5d;
 }
 
-/*  -------------------- Footer area */
+/*  ---------------------------------------- Footer area */
 .footer {
     text-align: center;
 }
@@ -207,7 +207,7 @@ footer i {
     padding-bottom: 20px;
 }
 
-/*  -------------------- Media queries area */
+/*  ---------------------------------------- Media queries area */
 @media (max-width: 560px) {
     .overlay-text {
         display: block;

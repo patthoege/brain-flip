@@ -86,6 +86,7 @@ class MixOrMatch {
         this.timer.innerText = this.timeRemaining;
         this.moves.innerText = this.totalClicks;
     }
+
     /**
      * Iterates through the cards array and removes the flip card from each.
      */
@@ -172,9 +173,9 @@ class MixOrMatch {
      * to get the remaining time. Update every 1000 milliseconds.
      */
     startCountDown() {
-        const startTime = Date.now();
+        const startTime = new Date();
         return setInterval(() => {
-            const currentTime = Date.now();
+            const currentTime = new Date();
             const elapsedTime = Math.floor((currentTime - startTime) / 1000);
             this.timeRemaining = this.timerValue - elapsedTime;
     

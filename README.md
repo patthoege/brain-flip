@@ -1,4 +1,4 @@
-# Brain flip 
+# Brain flip
 Welcome to **Brain Flip**, the online memory card game that will put your memory skills to the test! Challenge yourself by choosing two cards at a time and playing against your memory. This classic game has been adapted for the computer, providing a fair and enjoyable experience to put your skills to the ultimate test.
 
 As a user of this game, you'll be able to rely on your memory to make strategic decisions, and the computer will reveal its random choices to validate your results. Are you up for the challenge? Give it a try and see how well you can match and remember the cards in this exciting game of Brain Flip!
@@ -42,8 +42,6 @@ You can view the live site here - <a href="https://patthoege.github.io/brain-fli
     * [**Frameworks and Code**](<#frameworks-and-code>)
 *  [**Acknowledgments**](<#acknowledgments>)
 
-
-
 ## UX
 
 ### User stories
@@ -77,7 +75,6 @@ Holtwood One SC is the main font family for the memory card game. Sans Serif, if
 
 [Back to top](<#table-of-contents>)
 
-
 ## Features
 
 ### Start Game 
@@ -85,7 +82,15 @@ When clicked, the overlay text will close and the game starts with a running tim
 
 <details><summary><b>Start Game Image</b></summary>
 
-![Start Game Image](assets/)
+![Start Game Image](assets/images.readme/start-game.png)
+</details><br />
+
+### Difficulty Module
+The difficulty modules have three levels of difficulty. Easy, Medium and Hard. Which decreases the time of the game based on the difficulty. The player has access to choose one of the modules once has clicked the overlay to click to start and find a match.
+
+<details><summary><b>Difficulty Module Image</b></summary>
+
+![Start Game Image](assets/images.readme/difficulty-module.png)
 </details><br />
 
 ### Card Flip
@@ -102,34 +107,27 @@ Matching card pairs remain face up. Playing the card-matched sound to provide fe
 
 <details><summary><b>Card Match Image</b></summary>
 
-![Card Match Image](assets/)
+![Card Match Image](assets/images.readme/matched-cards.png)
 </details><br />
 
 ### Card mismatched
 Non-matching cards will flip back after 1,5 seconds.
 
-### Timer
-The timer will start running at the start of a game/finish running on game completion.
+### Timer and Move Counter
+The timer will start running with its corresponding timer difficulty level at the start of a game/finish running on game completion. The mover counter will increment by 1 each time a card is clicked.
 
-<details><summary><b>Timer Image</b></summary>
+<details><summary><b>Timer and Move Counter Image</b></summary>
 
-![Timer Image](assets/)
+![Timer Image nad Move Counter](assets/images.readme/timer-and-moves.png)
 </details><br />
 
-### Move Counter
-The mover counter will increment by 1 each time a card is clicked.
-
-<details><summary><b>Move Counter Image</b></summary>
-
-![Move Counter Image](assets/)
-</details><br />
 
 ### Game Over
 When the time runs up without completing the missing cards, the overlay game over will appear on the screen playing the game over sound and asking to play again. Resetting the time and the moving counter.
 
 <details><summary><b>Game Over Image</b></summary>
 
-![Game Over Image](assets/)
+![Game Over Image](assets/images.readme/game-over.png)
 </details><br />
 
 ### Win
@@ -137,21 +135,26 @@ Once found all the matching cards, the overlay you won will appear on the screen
 
 <details><summary><b>Win Image</b></summary>
 
-![Win Image](assets/)
+![Win Image](assets/images.readme/victory.png)
 </details><br />
-### Button 
-When clicked, will reset the time, and the moving counter and start the game again while playing the time as well.
+
+### Play Again Button 
+When clicked, will reset the time, and the moving counter and start the game again but only is the button visible once the player has chosen the difficulty level.
+
+<details><summary><b>Footer Button Play Again Image</b></summary>
+
+![Footer Button Play Again Image](assets/images.readme/footer%20-%20button.png)
+</details><br />
 
 ### Footer 
 At the bottom of the website, you can find the footer section which includes two social network icons for Github, and Linkedin. Finally, at the bottom of the footer, you can find the copyright information.
 
 <details><summary><b>Footer Image</b></summary>
 
-![Footer Image](assets/)
+![Footer Image](assets/images.readme/footer.png)
 </details><br />
 
 [Back to top](<#table-of-contents>)
-
 
 # Technologies Used
 * [HTML5](https://en.wikipedia.org/wiki/HTML) - Provides the content and structure for the website.
@@ -193,7 +196,6 @@ At the bottom of the website, you can find the footer section which includes two
 
 [Back to top](<#table-of-contents>)
 
-
 * ## Browser Compatibility
         
 ### Browser Testing
@@ -213,6 +215,7 @@ At the bottom of the website, you can find the footer section which includes two
     - Game functions 
     - Timer
     - Move Counter
+    - Play Again button
 
 [Back to top](<#table-of-contents>)
 
