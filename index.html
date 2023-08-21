@@ -15,17 +15,19 @@
 <h1 class="website-title">Brain Flip </h1>
 <h2 class="game-title">Memory Card Game</h2>
 <!-- End: Heading area -->
-<!-- Start: Overlay text -->
-<!-- <div class="overlay-text visible">
-    Click to Start
-    <span class="overlay-text-small">and find a match! </br> or </br> choose the level </br> you want to play</span>
-</div> -->
 
-<!-- Difficulty buttons -->
-<div class="difficulty-module overlay-text visible">   
+<!-- Start: Difficulty buttons -->
+<div id="level-buttons" class="difficulty-module overlay-text hidden-overlay-text">   
     <button class="difficulty-button" data-level="easy">Easy</button>
     <button class="difficulty-button" data-level="medium">Medium</button>
     <button class="difficulty-button" data-level="hard">Hard</button>
+</div>
+<!-- End: Difficulty buttons -->
+
+<!-- Start: Overlay text -->
+<div id="start-game-text" class="overlay-text visible">
+    Click to Start
+    <span class="overlay-text-small">and find a match!</span>
 </div>
 
 <div id="game-over-text" class="overlay-text hidden-overlay-text">

@@ -61,14 +61,14 @@ body {
     align-items: center;
     flex-direction: column;
     font-size: 30px;
-    /* background: #8413A1;
+    background: #8413A1;
     background: linear-gradient(to right,
        #8413A1 0%,  
        #A117C4 30%, 
        #0d1d86 50%, 
        #041f5d 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    -webkit-text-fill-color: rgba(29, 34, 109, 0.32);
 }
 
 .hidden-overlay-text {

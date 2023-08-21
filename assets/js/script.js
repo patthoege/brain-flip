@@ -167,16 +167,24 @@ class MixOrMatch {
     }
 
     /**
-     * Sets the count down remaining 
+     * Captures the start time when the timer begins. Within the setInterval loop, 
+     * it calculates the elapsed time in seconds and subtracts it from the original timerValue 
+     * to get the remaining time. Update every 1000 milliseconds.
      */
     startCountDown() {
+        const startTime = Date.now();
         return setInterval(() => {
-            this.timeRemaining--;
+            const currentTime = Date.now();
+            const elapsedTime = Math.floor((currentTime - startTime) / 1000);
+            this.timeRemaining = this.timerValue - elapsedTime;
+    
+            if (this.timeRemaining <= 0) {
+                this.timeRemaining = 0;
+                this.gameOver();
+            }
+    
             this.timer.innerText = this.timeRemaining;
-            if (this.timeRemaining === 0)
-               this.gameOver();
-        });
-
+        }, 1000); 
     }
 
     /**
@@ -239,19 +247,38 @@ if (document.readyState === 'loading') {
  * allowing users to dismiss these overlays by clicking on them.
  */
 function overlayHandling() {
+  
+    const startGameText = document.getElementById('start-game-text');
     const gameOverText = document.getElementById('game-over-text');
     const winText = document.getElementById('win-text');
+    const buttonModule = document.getElementById('level-buttons');
 
     // Add event listeners to close overlay texts
+    startGameText.addEventListener('click', () => {
+        startGameText.classList.remove('visible');
+        startGameText.classList.add('hidden-overlay-text');
+        buttonModule.classList.remove('hidden-overlay-text');
+        buttonModule.classList.add('visible');
+    }); 
+
     gameOverText.addEventListener('click', () => {
         gameOverText.classList.remove('visible');
         gameOverText.classList.add('hidden-overlay-text');
+        buttonModule.classList.remove('hidden-overlay-text');
+        buttonModule.classList.add('visible');
     });
 
     winText.addEventListener('click', () => {
         winText.classList.remove('visible');
         winText.classList.add('hidden-overlay-text');
+        buttonModule.classList.remove('hidden-overlay-text');
+        buttonModule.classList.add('visible');
     });
+
+    buttonModule.addEventListener('click', () => {
+        buttonModule.classList.remove('visible');
+        buttonModule.classList.add('hidden-overlay-text');
+    }); 
 }
 
 /**
