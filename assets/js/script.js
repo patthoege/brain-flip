@@ -52,10 +52,10 @@ class AudioController {
  * This class creates the memory card game methods  
  */
 class MixOrMatch {
-    constructor(totalTime, cards) {
+    constructor(timerValue, cards) {
         this.cardsArray = cards;
-        this.totalTime = totalTime;
-        this.timeRemaining = totalTime;
+        this.timerValue = timerValue;
+        this.timeRemaining = timerValue;
         this.timer = document.getElementById('time-countdown');
         this.moves = document.getElementById('flips');
         this.audioController = new AudioController();
@@ -65,7 +65,7 @@ class MixOrMatch {
     startGame() {
         this.cardCheck = null;
         this.totalClicks = 0;
-        this.timeRemaining = this.totalTime;
+        this.timeRemaining = this.timerValue;
         this.matchedCards =[];
         this.busy = true;
         
@@ -175,7 +175,7 @@ class MixOrMatch {
             this.timer.innerText = this.timeRemaining;
             if (this.timeRemaining === 0)
                this.gameOver();
-        },900);
+        });
 
     }
 
@@ -234,22 +234,36 @@ if (document.readyState === 'loading') {
     ready();
 }
 
+
 /**
  * Array creates an array from an HTML Collection and targets the click event 
  * to remove the start game overlay text.
  */
 function ready() {
-    let overlays = Array.from(document.getElementsByClassName('overlay-text'));
+    // let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new MixOrMatch(90, cards);
+    let game;
 
+    this.difficultyButtons = document.querySelectorAll('.difficulty-button'); 
 
-    overlays.forEach(overlay => {
-        overlay.addEventListener('click', () => {
-            overlay.classList.add('hidden-overlay-text');
-            
+    // Add event listeners to difficulty buttons
+    difficultyButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const difficulty = button.getAttribute('data-level');
+            let timerValue;
+
+            // Set timer value based on difficulty
+            if (difficulty === 'easy') {
+                timerValue = 120;
+            } else if (difficulty === 'medium') {
+                timerValue = 90;
+            } else if (difficulty === 'hard') {
+                timerValue = 60;
+            }
+
+            game = new MixOrMatch(timerValue, cards);
             game.startGame();
-        });
+        }); 
     });
 
     cards.forEach(card => {
