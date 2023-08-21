@@ -234,13 +234,31 @@ if (document.readyState === 'loading') {
     ready();
 }
 
+/**
+ * Adds click event listeners to the "game over" and "win" overlay text elements,
+ * allowing users to dismiss these overlays by clicking on them.
+ */
+function overlayHandling() {
+    const gameOverText = document.getElementById('game-over-text');
+    const winText = document.getElementById('win-text');
+
+    // Add event listeners to close overlay texts
+    gameOverText.addEventListener('click', () => {
+        gameOverText.classList.remove('visible');
+        gameOverText.classList.add('hidden-overlay-text');
+    });
+
+    winText.addEventListener('click', () => {
+        winText.classList.remove('visible');
+        winText.classList.add('hidden-overlay-text');
+    });
+}
 
 /**
  * Array creates an array from an HTML Collection and targets the click event 
  * to remove the start game overlay text.
  */
 function ready() {
-    // let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
     let game;
 
@@ -276,4 +294,6 @@ function ready() {
     restartButton.addEventListener('click', () => {
         game.startGame();
     });
+
+    overlayHandling();
 }
