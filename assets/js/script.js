@@ -197,7 +197,7 @@ class MixOrMatch {
         gameOverText.classList.remove('hidden-overlay-text');
         gameOverText.classList.add('visible');
         this.hideCards();
-
+        document.getElementById('restart-board').style.display = 'none';
         this.timer.innerText = 0;
         this.moves.innerText = 0;
     }
@@ -211,7 +211,7 @@ class MixOrMatch {
         winText.classList.remove('hidden-overlay-text');
         winText.classList.add('visible');
         this.hideCards();
-
+        document.getElementById('restart-board').style.display = 'none';
         this.timer.innerText = 0;
         this.moves.innerText = 0;
     }
@@ -281,20 +281,24 @@ function overlayHandling() {
     });
 
     buttonModule.addEventListener('click', () => {
-        buttonModule.classList.remove('visible');
-        buttonModule.classList.add('hidden-overlay-text');
+    buttonModule.classList.remove('visible');
+    buttonModule.classList.add('hidden-overlay-text');
     }); 
 }
 
 /**
  * Array creates an array from an HTML Collection and targets the click event 
- * to remove the start game overlay text.
+ * to remove the start game overlay text. Make the restart button visible only 
+ * after the user has chosen a difficulty level.
  */
+
+// Declare game variable 
+let game;
+
 function ready() {
     let cards = Array.from(document.getElementsByClassName('card'));
-    let game;
-
     this.difficultyButtons = document.querySelectorAll('.difficulty-button'); 
+    document.getElementById('restart-board').style.display = 'none';
 
     // Add event listeners to difficulty buttons
     difficultyButtons.forEach(button => {
@@ -313,6 +317,8 @@ function ready() {
 
             game = new MixOrMatch(timerValue, cards);
             game.startGame();
+            
+            document.getElementById('restart-board').style.display = 'block';
         }); 
     });
 
