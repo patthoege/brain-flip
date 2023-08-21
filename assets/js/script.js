@@ -197,6 +197,9 @@ class MixOrMatch {
         gameOverText.classList.remove('hidden-overlay-text');
         gameOverText.classList.add('visible');
         this.hideCards();
+
+        this.timer.innerText = 0;
+        this.moves.innerText = 0;
     }
     /**
      * Sets the game overlay text and the win sound
@@ -208,6 +211,9 @@ class MixOrMatch {
         winText.classList.remove('hidden-overlay-text');
         winText.classList.add('visible');
         this.hideCards();
+
+        this.timer.innerText = 0;
+        this.moves.innerText = 0;
     }
 
    /**
@@ -247,7 +253,6 @@ if (document.readyState === 'loading') {
  * allowing users to dismiss these overlays by clicking on them.
  */
 function overlayHandling() {
-  
     const startGameText = document.getElementById('start-game-text');
     const gameOverText = document.getElementById('game-over-text');
     const winText = document.getElementById('win-text');
