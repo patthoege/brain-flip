@@ -190,6 +190,8 @@ class MixOrMatch {
 
     /**
      * Sets the game overlay text and the game over sound
+     * and sets to zero the move counter and timer.
+     * The restart-board is set to not be displayed.
      */
     gameOver() {
         clearInterval(this.countDown);
@@ -203,7 +205,8 @@ class MixOrMatch {
         this.moves.innerText = 0;
     }
     /**
-     * Sets the game overlay text and the win sound
+     * Sets the game overlay text and the win sound and sets to zero 
+     * the move counter and timer. The restart-board is set to not be displayed.
      */
     win() {
         clearInterval(this.countDown);
@@ -250,8 +253,8 @@ if (document.readyState === 'loading') {
 }
 
 /**
- * Adds click event listeners to the "game over" and "win" overlay text elements,
- * allowing users to dismiss these overlays by clicking on them.
+ * Adds click event listeners to the "Start Game", "Game over", "Win" and "Button Modules" elements,
+ * allowing users to dismiss these overlays by clicking on them. 
  */
 function overlayHandling() {
     const startGameText = document.getElementById('start-game-text');
@@ -289,8 +292,9 @@ function overlayHandling() {
 
 /**
  * Array creates an array from an HTML Collection and targets the click event 
- * to remove the start game overlay text. Make the restart button visible only 
- * after the user has chosen a difficulty level.
+ * to remove the start game overlay text. For each difficulty button in difficultyButtons, 
+ * an event listener is attached that listens for a click event. Also card clicks events.
+ * Makes the restart button visible only after the user has chosen a difficulty level.
  */
 
 // Declare game variable 
@@ -323,16 +327,17 @@ function ready() {
         }); 
     });
 
+    //For each card in the cards array, an event listener listens for a click event.
     cards.forEach(card => {
         card.addEventListener('click', () => {
             game.flipCard(card);
         });
     });
-
+    // event listener to restart the game.
     const restartButton = document.getElementById('restart-board');
     restartButton.addEventListener('click', () => {
         game.startGame();
     });
-
+    // calling overlay text elements to handle their dismissal.
     overlayHandling();
 }

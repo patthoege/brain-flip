@@ -17,14 +17,14 @@ You can view the live site here - <a href="https://patthoege.github.io/brain-fli
   + [Typography](#typography)
 * [**Features**](<#features>)
     * [Start Game](<#start-game>)
+    * [Difficulty Module](<#difficulty-module>)
     * [Card Flip](<#card-flip>)
     * [Card Match](<#card-match>)
     * [Card Mismatched](<#card-mismatched>)
-    * [Timer](<#timer>)
-    * [Move Counter](<#move-counter>)
+    * [Timer and Move Counter](<#timer-and-move-counter>)
     * [Game Over](<#game-over>)
     * [Win](<#win>)
-    * [Button](<#button>)
+    * [Play Again Button](<#play-again-button>)
     * [Footer](<#footer>)
 * [**Technologies Used**](<#technologies-used>)
 * [**Testing**](<#testing>)
@@ -59,7 +59,7 @@ You can view the live site here - <a href="https://patthoege.github.io/brain-fli
 [Back to top](<#table-of-contents>)
 
 ### Site Goal
-The game is designed to match 16 cards within 90 seconds, ensuring a quick and engaging experience for the user. The rules and functionality are kept simple to ensure minimal time is required for learning and understanding.
+The game is designed to match 16 cards within 60, 90 or 120 seconds, ensuring a quick and engaging experience for the user. The rules and functionality are kept simple to ensure minimal time is required for learning and understanding.
 
 [Back to top](<#table-of-contents>)
 
@@ -85,6 +85,8 @@ When clicked, the overlay text will close and the game starts with a running tim
 ![Start Game Image](assets/images.readme/start-game.png)
 </details><br />
 
+[Back to top](<#table-of-contents>)
+
 ### Difficulty Module
 The difficulty modules have three levels of difficulty. Easy, Medium and Hard. Which decreases the time of the game based on the difficulty. The player has access to choose one of the modules once has clicked the overlay to click to start and find a match.
 
@@ -93,14 +95,12 @@ The difficulty modules have three levels of difficulty. Easy, Medium and Hard. W
 ![Start Game Image](assets/images.readme/difficulty-module.png)
 </details><br />
 
+[Back to top](<#table-of-contents>)
+
 ### Card Flip
 When a card is clicked, the card flips over and shows an image. Playing the click sound to provide feedback and engage the user.
 
-
-<details><summary><b>Card Flip Image</b></summary>
-
-![Card Flip Image](assets/)
-</details><br />
+[Back to top](<#table-of-contents>)
 
 ### Card Match
 Matching card pairs remain face up. Playing the card-matched sound to provide feedback and engage the user.
@@ -109,6 +109,8 @@ Matching card pairs remain face up. Playing the card-matched sound to provide fe
 
 ![Card Match Image](assets/images.readme/matched-cards.png)
 </details><br />
+
+[Back to top](<#table-of-contents>)
 
 ### Card mismatched
 Non-matching cards will flip back after 1,5 seconds.
@@ -121,6 +123,7 @@ The timer will start running with its corresponding timer difficulty level at th
 ![Timer Image nad Move Counter](assets/images.readme/timer-and-moves.png)
 </details><br />
 
+[Back to top](<#table-of-contents>)
 
 ### Game Over
 When the time runs up without completing the missing cards, the overlay game over will appear on the screen playing the game over sound and asking to play again. Resetting the time and the moving counter.
@@ -130,6 +133,8 @@ When the time runs up without completing the missing cards, the overlay game ove
 ![Game Over Image](assets/images.readme/game-over.png)
 </details><br />
 
+[Back to top](<#table-of-contents>)
+
 ### Win
 Once found all the matching cards, the overlay you won will appear on the screen playing the winning sound and ask to play again. Resetting the time and the moving counter.
 
@@ -138,6 +143,8 @@ Once found all the matching cards, the overlay you won will appear on the screen
 ![Win Image](assets/images.readme/victory.png)
 </details><br />
 
+[Back to top](<#table-of-contents>)
+
 ### Play Again Button 
 When clicked, will reset the time, and the moving counter and start the game again but only is the button visible once the player has chosen the difficulty level.
 
@@ -145,6 +152,8 @@ When clicked, will reset the time, and the moving counter and start the game aga
 
 ![Footer Button Play Again Image](assets/images.readme/footer%20-%20button.png)
 </details><br />
+
+[Back to top](<#table-of-contents>)
 
 ### Footer 
 At the bottom of the website, you can find the footer section which includes two social network icons for Github, and Linkedin. Finally, at the bottom of the footer, you can find the copyright information.
@@ -229,6 +238,9 @@ At the bottom of the website, you can find the footer section which includes two
 
 3. To review the last loose ends in developer tools. All the functions appear to be working correctly, but I encountered a browser limitation, due to the async nature of things, in the console when playing the game. The error message is **"Uncaught (in promise) DOMException: The play() request was interrupted by a call to pause()."** I believe this issue is related to how I have implemented the audio pause layout, which is causing conflicts between multiple play/pause requests for an audio element. To address this problem, I sought assistance from a tutor who suggested commenting out all instances of "this.pause()" in the audio code. From my side, even after clearing the cache, I still encountered the same problem as described in the **2. paragraph.**  Specifically, the audio for matching cards is not being played after successfully finding two matching pairs in a row, but for the tutor, the audio was working as supposed to. So I only commented *match()* from *this.pause()* **line code: 42**  to make the sound work.![Uncaught error DOMException](assets/images.readme/uncaught-error-DOMException.png)
 
+4. As I implemented the difficulty levels module, the timer was running down fast and I researched [Stack Overflow](https://stackoverflow.com/questions/9335140/how-to-countdown-to-a-date) for more insight, the startCountDown didn't track a start time when startCountDown started. 'this.timeRemaining' by 1 each time the interval executed. It didn't consider the actual elapsed time between the start of the countdown and the current time. To create a more accurate timer that runs consistently, I implemented the Date object I needed to update the setInterval() function to repeatedly execute a provided callback function at regular intervals (in this case, every 1000 milliseconds).
+
+
 [Back to top](<#table-of-contents>)
 
 ## Deployment
@@ -251,7 +263,7 @@ Steps I took to deploy my website;
 * The icons came from [Font Awesome](https://fontawesome.com/)
 * The favicon came from [Icons8](https://icons8.de/icons/set/brain)
 * Converter image to png format for better performance from [Convertio](https://convertio.co/) 
-* The responsive preview image at the top of the README.md came from [Am I Responsive?](https://ui.dev/amiresponsive?)
+* The responsive preview image at the top of the README.md came from [Am I Responsive?](https://ui.dev/amiresponsive?url=https://patthoege.github.io/brain-flip/)
 * The card pattern image came from [Pattern Monster](https://pattern.monster/)
 * The images came from [Pexels](https://www.pexels.com/) and [Freepik](https://www.freepik.com/)
 * The text title color came from [Text Gradient Color](https://www.cssportal.com/css-text-gradient-generator/)
@@ -260,12 +272,14 @@ Steps I took to deploy my website;
 [Back to top](<#table-of-contents>)
 
 ### Frameworks and Code
-* The website layout draws its inspiration from the Love Maths project. 
+* The website layout draws its inspiration from the WebDevSimplified project. 
 * <a href="https://www.w3schools.com/">W3 Schools</a> was a source of help to learn the methods/functions of a card game.
-* The <a href="https://www.youtube.com/watch?v=3uuQ3g92oPQ&t=2846s">PortEXE</a> was a very useful resource to learn JavaScript Oriented Object Design Programming who also collaborated with <a href="https://codepen.io/WebDevSimplified/pen/EdEjyx">WebDevSimplified</a> from his tutorial and I have implemented and modified it on my own.
+* The <a href="https://www.youtube.com/watch?v=3uuQ3g92oPQ&t=2846s">PortEXE</a> was a very useful resource to learn JavaScript Oriented Object Design Programming which also collaborated with <a href="https://codepen.io/WebDevSimplified/pen/EdEjyx">WebDevSimplified</a> from his tutorial and I have implemented his design and modified it on my own.
 I research various memory card games from students to gain insights. During this process, I incorporated some of their key illustration points into my own.
 * Research further how to shuffle from <a href="https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj"> Dev.to</a>
 * As I am very new to JS, I asked a developer friend about a better way to approach the code, he recommends to use Javascript classes(Object Oriented Design Pattern) I also did some research about how to use classes to have a more accessible and organized layout of code<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_classes"> JavaScript classes</a> and watch some tutorials.
+* To set the new difficulty module of buttons I have researched how to loop through the buttons using forEach() an event listener for each button targeting the elements with an attribute data [How to loop through all the buttons to a click event listener](https://stackoverflow.com/questions/67840686/how-to-loop-through-all-the-buttons-to-a-click-event-listener) and [Add an Event Listener to Multiple Elements](https://www.codeinwp.com/snippets/add-event-listener-to-multiple-elements-with-javascript/)
+
 
 
 
