@@ -302,7 +302,7 @@ let game;
 
 function ready() {
     let cards = Array.from(document.getElementsByClassName('card'));
-    this.difficultyButtons = document.querySelectorAll('.difficulty-button'); 
+    let difficultyButtons = document.querySelectorAll('.difficulty-button'); 
     document.getElementById('restart-board').style.display = 'none';
 
     // Add event listeners to difficulty buttons

@@ -36,6 +36,7 @@ You can view the live site here - <a href="https://patthoege.github.io/brain-fli
    * [Functionality](<#functionality>)
 * [**Bugs**](<#bugs>)
    * [Fixed Bugs](<#bugs>)
+   * [Media Query](<#media-query>)
 * [**Deployment**](<#deployment>)
 * [**Credits**](<#credits>)
     * [**Content**](<#content>)
@@ -240,6 +241,8 @@ At the bottom of the website, you can find the footer section which includes two
 
 4. As I implemented the difficulty levels module, the timer was running down fast and I researched [Stack Overflow](https://stackoverflow.com/questions/9335140/how-to-countdown-to-a-date) for more insight, the startCountDown didn't track a start time when startCountDown started. 'this.timeRemaining' by 1 each time the interval executed. It didn't consider the actual elapsed time between the start of the countdown and the current time. To create a more accurate timer that runs consistently, I implemented the Date object I needed to update the setInterval() function to repeatedly execute a provided callback function at regular intervals (in this case, every 1000 milliseconds).
 
+## Media Query - Responsive Web Design
+* Regarding the assessment of the project, both my mentor and I thoroughly reviewed the criteria outlined in "LO2 - 2.5" We tested across various screen sizes, primarily small screen sizes to assess the responsiveness of the project. Notably, the implemented media queries appeared to function as intended. Encouragingly, my mentor shared that feedback from other mentors reinforced the consensus that the project exhibited no observable responsiveness issues. 
 
 [Back to top](<#table-of-contents>)
 
