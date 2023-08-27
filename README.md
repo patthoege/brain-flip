@@ -36,7 +36,7 @@ You can view the live site here - <a href="https://patthoege.github.io/brain-fli
    * [Functionality](<#functionality>)
 * [**Bugs**](<#bugs>)
    * [Fixed Bugs](<#bugs>)
-   * [Media Query](<#media-query>)
+   * [Media Query - Responsive Web Design](<#media-query---responsive-web-design>)
 * [**Deployment**](<#deployment>)
 * [**Credits**](<#credits>)
     * [**Content**](<#content>)
