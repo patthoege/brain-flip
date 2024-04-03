@@ -67,6 +67,40 @@ body {
 }
 
 /*  ---------------------------------------- Overlay text area */
+.container-info {
+    border: 2px solid #dedede;
+    background: #3951ED;
+    background: linear-gradient(to left,
+        #3951ED 0%,
+        #A117C4 50%,
+        #3951ED 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-radius: 15px;
+    color: #0e141a;
+    background-color: #dedede;
+    text-align: center;
+    padding: 30px;
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+.text-intro {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text-rules {
+    font-size: 15px;
+    color: #dedede !important;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
 .overlay-text {
     position: fixed;
     top: 0;
@@ -79,14 +113,12 @@ body {
     align-items: center;
     flex-direction: column;
     font-size: 30px;
-    background: #8413A1;
-    background: linear-gradient(to right,
-       #8413A1 0%,  
-       #A117C4 30%, 
-       #0d1d86 50%, 
-       #041f5d 100%);
+    background: linear-gradient(to left,
+        #3951ED 0%,
+        #A117C4 50%,
+        #3951ED 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(29, 34, 109, 0.32);
+    -webkit-text-fill-color: transparent;
 }
 
 .hidden-overlay-text {

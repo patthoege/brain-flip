@@ -16,18 +16,28 @@ if (document.readyState === 'loading') {
  * allowing users to dismiss these overlays by clicking on them. 
  */
 function overlayHandling() {
+    const introGameText = document.getElementById('intro-game-text');
     const startGameText = document.getElementById('start-game-text');
     const gameOverText = document.getElementById('game-over-text');
     const winText = document.getElementById('win-text');
     const buttonModule = document.getElementById('level-buttons');
 
     // Add event listeners to close overlay texts
+    introGameText.addEventListener('click', () => {
+        introGameText.classList.add('visible');
+        introGameText.classList.add('hidden-overlay-text');
+        buttonModule.classList.remove('hidden-overlay-text');
+        buttonModule.classList.add('visible');
+    });
+
+
     startGameText.addEventListener('click', () => {
-        startGameText.classList.remove('visible');
+        startGameText.classList.add('visible');
         startGameText.classList.add('hidden-overlay-text');
         buttonModule.classList.remove('hidden-overlay-text');
         buttonModule.classList.add('visible');
-    }); 
+    });
+
 
     gameOverText.addEventListener('click', () => {
         gameOverText.classList.remove('visible');
@@ -36,6 +46,7 @@ function overlayHandling() {
         buttonModule.classList.add('visible');
     });
 
+
     winText.addEventListener('click', () => {
         winText.classList.remove('visible');
         winText.classList.add('hidden-overlay-text');
@@ -43,10 +54,11 @@ function overlayHandling() {
         buttonModule.classList.add('visible');
     });
 
+
     buttonModule.addEventListener('click', () => {
     buttonModule.classList.remove('visible');
-    buttonModule.classList.add('hidden-overlay-text');
-    }); 
+    buttonModule.classList.add('visible')
+    });
 }
 
 /**
