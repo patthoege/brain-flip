@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    background: radial-gradient(#3951ed, #041f5d);
+    background: radial-gradient(#101744f5, #041f5d);
     font-family: 'Holtwood One SC', serif;
     color: #0e141a;
 }
@@ -20,22 +20,34 @@ body {
 .website-title {
     text-align: center;
     background: #8413A1;
-    background: linear-gradient(to right,
-       #8413A1 0%,  
-       #A117C4 30%, 
-       #3951ed 50%, 
-       #041f5d 100%);
+    background: linear-gradient(to left,
+        #3951ED 0%,
+        #A117C4 30%,
+        #3951ED 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .game-title {
     background: #8413A1;
-    background: linear-gradient(to right,
-       #8413A1 0%,  
-       #A117C4 30%, 
-       #3951ed 50%, 
-       #041f5d 100%);
+    background: linear-gradient(to left,
+        #3951ED 0%,
+        #A117C4 30%,
+        #3951ED 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to left,
+        #3951ED 0%,
+        #A117C4 50%,
+        #3951ED 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
