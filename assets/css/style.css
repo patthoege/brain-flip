@@ -42,10 +42,28 @@ body {
 
 .difficulty-module {
     display: flex;
-	justify-content: center;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin: 10px 5px;
     gap: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.difficulty-button {
+    margin: 0 5px;
+}
+
+#level-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    height: 60vh;
 }
 
 /*  ---------------------------------------- Overlay text area */

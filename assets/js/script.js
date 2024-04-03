@@ -84,14 +84,14 @@ function ready() {
             } else if (difficulty === 'medium') {
                 timerValue = 90;
             } else if (difficulty === 'hard') {
-                timerValue = 60;
+                timerValue = 1;
             }
 
             game = new MixOrMatch(timerValue, cards, audioController);
             game.startGame();
             
             document.getElementById('restart-board').style.display = 'block';
-            showGameArea(); // Call the function to show the game area
+            showGameArea();
         }); 
     });
 
