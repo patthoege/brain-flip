@@ -12,12 +12,14 @@ if (document.readyState === 'loading') {
 }
 
 /**
- * Adds click event listeners to the "Start Game", "Game over", "Win" and "Button Modules" elements,
+ * Adds click event listeners to the "Start Game", "How To Play" "Game over", "Win" and "Button Modules" elements,
  * allowing users to dismiss these overlays by clicking on them. 
  */
 function overlayHandling() {
+    const howToPlayButton = document.getElementById('how-to-play-button');
+    const howToPlayOverlay = document.getElementById('how-to-play-overlay');
+    const goBackButton = document.getElementById('go-back-button');
     const introGameText = document.getElementById('intro-game-text');
-    const startGameText = document.getElementById('start-game-text');
     const gameOverText = document.getElementById('game-over-text');
     const winText = document.getElementById('win-text');
     const buttonModule = document.getElementById('level-buttons');
@@ -31,11 +33,20 @@ function overlayHandling() {
     });
 
 
-    startGameText.addEventListener('click', () => {
-        startGameText.classList.add('visible');
-        startGameText.classList.add('hidden-overlay-text');
-        buttonModule.classList.remove('hidden-overlay-text');
-        buttonModule.classList.add('visible');
+    howToPlayButton.addEventListener('click', () => {
+        event.stopPropagation();
+        howToPlayOverlay.classList.add('visible');
+        howToPlayOverlay.classList.remove('hidden-overlay-text');
+        introGameText.classList.add('hidden-overlay-text');
+        introGameText.classList.remove('visible');
+    });
+
+
+    goBackButton.addEventListener('click', () => {
+        howToPlayOverlay.classList.remove('visible');
+        howToPlayOverlay.classList.add('hidden-overlay-text');
+        introGameText.classList.add('visible');
+        introGameText.classList.remove('hidden-overlay-text');
     });
 
 

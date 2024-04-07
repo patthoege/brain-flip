@@ -28,27 +28,26 @@
 
 <!-- Start: Overlay text -->
 <div id="intro-game-text" class="container-info text-intro visible">
-    <p> Challenge yourself by choosing two cards at a time and playing against your memory.</p>
-    <span class="overlay-text-small text-intro container-info">
-        <h2>How to Play ?</h2>
-        <ol class="text-rules">
-            <li>Start by choosing a difficulty level: Easy, Medium, or Hard.</li>
-            <li>Once you've selected your difficulty, the cards will be displayed face down.</li>
-            <li>Click on any card to reveal its image.</li>
-            <li>Click on another card to reveal its image as well.</li>
-            <li>If the two cards have the same image, they will remain face up, and you've made a match!</li>
-            <li>If the two cards don't match, they will flip back face down, and you can try again.</li>
-            <li>Keep flipping pairs of cards until you've matched all of them.</li>
-            <li>Your goal is to match all the cards in the shortest time possible and with the fewest moves.</li>
-        </ol>
-        <br>
-        <p> Click to Start and find a match. <br>Good luck!</p>
-    </span>
+    <p>Challenge yourself by choosing two cards at a time.</p>
+    <div class="controls">
+        <button id="start-game-button" class="overlay-button">Start Game</button>
+        <button id="how-to-play-button" class="overlay-button">How to Play</button>
+    </div>
 </div>
 
-<div id="start-game-text" class="overlay-text hidden-overlay-text">
-    Click to Start
-    <span class="overlay-text-small">and <br> find a match!</span>
+<div id="how-to-play-overlay" class="overlay-text hidden-overlay-text">
+    <h2>How to Play ?</h2>
+    <ol class="text-rules">
+        <li>Start by choosing a difficulty level: Easy, Medium, or Hard.</li>
+        <li>Once you've selected your difficulty, the cards will be displayed face down.</li>
+        <li>Click on any card to reveal its image.</li>
+        <li>Click on another card to reveal its image as well.</li>
+        <li>If the two cards have the same image, they will remain face up, and you've made a match!</li>
+        <li>If the two cards don't match, they will flip back face down, and you can try again.</li>
+        <li>Keep flipping pairs of cards until you've matched all of them.</li>
+        <li>Your goal is to match all the cards in the shortest time possible and with the fewest moves.</li>
+    </ol>
+    <button id="go-back-button" class="overlay-button">Go Back</button>
 </div>
 
 <div id="game-over-text" class="overlay-text hidden-overlay-text">
