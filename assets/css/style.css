@@ -268,7 +268,17 @@ button:hover {
 
 /*  ---------------------------------------- Footer area */
 .footer {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
 }
 
 footer i {

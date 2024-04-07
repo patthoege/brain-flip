@@ -93,6 +93,7 @@ function ready() {
     function showGameArea() {
         document.getElementById('level-buttons').style.display = 'none';
         document.querySelector('.game-container').style.display = 'grid';
+        document.getElementById("position").style.position = "relative";
     }
 
     // Add event listeners to difficulty buttons
