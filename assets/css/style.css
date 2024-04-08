@@ -245,6 +245,10 @@ body {
 
 
 /*  ---------------------------------------- Button area */
+#restart-board {
+    display: none;
+}
+
 .reset {
     display: flex;
     justify-content: center;

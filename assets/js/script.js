@@ -108,7 +108,7 @@ function ready() {
             } else if (difficulty === 'medium') {
                 timerValue = 90;
             } else if (difficulty === 'hard') {
-                timerValue = 1;
+                timerValue = 60;
             }
 
             game = new MixOrMatch(timerValue, cards, audioController);
