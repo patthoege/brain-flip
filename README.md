@@ -16,8 +16,9 @@ You can view the live site here - <a href="https://patthoege.github.io/brain-fli
   + [Wireframes](#wireframes)
   + [Typography](#typography)
 * [**Features**](<#features>)
-    * [Start Game](<#start-game>)
-    * [Difficulty Module](<#difficulty-module>)
+    * [Controls](<#controls>)
+    * [How to Play](<#how-to-play>)
+    * [Start Game - Difficulty Module](<#start-game---difficulty-module>)
     * [Card Flip](<#card-flip>)
     * [Card Match](<#card-match>)
     * [Card Mismatched](<#card-mismatched>)
@@ -78,18 +79,26 @@ Holtwood One SC is the main font family for the memory card game. Sans Serif, if
 
 ## Features
 
-### Start Game 
-When clicked, the overlay text will close and the game starts with a running timer and moving counter.
+### Controls
+The game features simple button controls for easy navigation.
 
-<details><summary><b>Start Game Image</b></summary>
+<details><summary><b>Control Buttons Image</b></summary>
 
-![Start Game Image](assets/images.readme/start-game.png)
+![Control Button Image](assets/images.readme/control-buttons.png)
 </details><br />
+
+### How to Play
+Click this button to view instructions on how to play the game.
+<details><summary><b>How to Play Image</b></summary>
+
+![How to Play Image](assets/images.readme/how-to-play.png)
+</details><br />
+
 
 [Back to top](<#table-of-contents>)
 
-### Difficulty Module
-The difficulty modules have three levels of difficulty. Easy, Medium and Hard. Which decreases the time of the game based on the difficulty. The player has access to choose one of the modules once has clicked the overlay to click to start and find a match.
+### Start Game - Difficulty Module
+When start game button clicked, the difficulty modules have three levels of difficulty. Easy, Medium and Hard. Which decreases the time of the game based on the difficulty. The player has access to choose one of the modules once has clicked the overlay to click to start and find a match.
 
 <details><summary><b>Difficulty Module Image</b></summary>
 
