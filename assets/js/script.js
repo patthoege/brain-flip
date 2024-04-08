@@ -68,7 +68,7 @@ function overlayHandling() {
 
     buttonModule.addEventListener('click', () => {
     buttonModule.classList.remove('visible');
-    buttonModule.classList.add('visible')
+    buttonModule.classList.add('visible');
     });
 }
 

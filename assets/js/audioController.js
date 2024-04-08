@@ -30,7 +30,6 @@ class AudioController {
         this.flipSound.volume = 0.3;
     }
     match() {
-        // this.pause();
         this.matchSound.play();
         this.matchSound.volume = 0.3;
     }
