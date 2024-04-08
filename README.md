@@ -51,7 +51,8 @@ You can view the live site here - <a href="https://patthoege.github.io/brain-fli
 
 - Site Features Overview: Get a comprehensive overview of the site's features and functionalities.
 - Snappy Theme Blurb: Discover a short and captivating description of the site's theme.
-- Simple Game Rules: Read a brief and straightforward explanation of the game rule.
+- Game Controls: Friendly interactive buttons to start the game or brief explanation rules of the game.
+- Difficulty leves: the game has three levels of difficulty to choose. Easy, Medium and Hard.
 - Click Interaction: Play the game with easy-click interactions, including the ability to toggle cards and enjoy exciting sound effects.
 - Elapsed Time: Monitor the time that has passed while playing the game.
 - Move Counter: Keep track of the number of clicks you perform with a move counter.
