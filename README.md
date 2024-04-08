@@ -68,7 +68,7 @@ The game is designed to match 16 cards within 60, 90 or 120 seconds, ensuring a 
 ## Design
 
 ### Wireframes
-The wireframes for the project can be found [here.](/assets/images.readme/framework.pdf)
+The wireframes for the project can be found [here.](/assets/images.readme/wireframes-brainflip.pdf)
 
 [Back to top](<#table-of-contents>)
 
